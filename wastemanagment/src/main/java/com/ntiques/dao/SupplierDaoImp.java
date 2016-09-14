@@ -34,11 +34,12 @@ public class SupplierDaoImp implements SupplierDao {
 		return listSupplier;
 	}
 	
-	public void saveOrUpdate(Supplier category) {
-		sessionFactory.getCurrentSession().saveOrUpdate(category);
+	public void saveOrUpdate(Supplier supplier) 
+	{
+		sessionFactory.getCurrentSession().saveOrUpdate(supplier);
 	}
 
-	public void delete(String id) {
+	public void delete(int id) {
 		Supplier SupplierToDelete = new Supplier();
 		SupplierToDelete.setId(id);
 		sessionFactory.getCurrentSession().delete(SupplierToDelete);
@@ -46,7 +47,7 @@ public class SupplierDaoImp implements SupplierDao {
 
 
 	
-	public Supplier get(String id) {
+	public Supplier get(int id) {
 		
 		String hql = "from Supplier where id=" + "'"+ id +"'";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);

@@ -10,9 +10,9 @@ public interface SubCategoryDao
 {
 public void saveOrUpdate(SubCategory subcategory);
 
-public void delete(String id);
+public void delete(int id);
 
-public SubCategory get(String id);
+public SubCategory get(int id);
 
 public SubCategory getByName(String name);
 

@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
   <style>
   .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     width: 80%;
@@ -54,7 +55,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="/wastemanagment/">Home</a></li>
-      <sec:authorize access="hasRole('ROLE_ADMIN')">
+      <sec:authorize access="hasRole('ROLE_USER')">
        <li><a href="categories">Category</a></li>
       <li><a href="suppliers">Supplier</a></li>
       <li><a href="subcategories">SubCategory</a></li>
@@ -84,7 +85,6 @@
         </li>
         </c:forEach>
       </ul>
-    <div class="nav navbar navbar-right">
       <ul class="nav navbar navbar-right" >
       <sec:authorize access="isAnonymous()">
        <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>Signin</a></li>
@@ -99,6 +99,7 @@
         </sec:authorize>
         <sec:authorize access="isAnonymous()">
 		<li><a href="users"><span class="glyphicon glyphicon-user"></span>Signup</a></li>
+		<li><a href="users"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
 		</sec:authorize>
       </ul>
       </div>
@@ -125,7 +126,7 @@
       </div>
 
       <div class="item">
-        <img src="resources/images/2.jpg" alt="Image">
+        <img src="resources/images/bed1.jpg" alt="Image">
         <div class="carousel-caption">
           <h3></h3>
           <p>Lorem ipsum...</p>

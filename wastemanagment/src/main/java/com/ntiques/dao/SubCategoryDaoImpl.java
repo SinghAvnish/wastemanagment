@@ -38,7 +38,7 @@ public class SubCategoryDaoImpl implements SubCategoryDao{
 	}
 	
 
-	public void delete(String id) {
+	public void delete(int id) {
 		SubCategory SubCategoryToDelete = new SubCategory();
 		SubCategoryToDelete.setId(id);
 		sessionFactory.getCurrentSession().delete(SubCategoryToDelete);
@@ -46,7 +46,7 @@ public class SubCategoryDaoImpl implements SubCategoryDao{
 
 
 	
-	public SubCategory get(String id) {
+	public SubCategory get(int id) {
 		
 		//select *from Sub Category where id='101'
 		String hql = "from SubCategory where id=" + "'"+ id +"'";

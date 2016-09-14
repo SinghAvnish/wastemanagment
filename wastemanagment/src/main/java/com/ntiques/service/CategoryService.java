@@ -22,11 +22,11 @@ CategoryDaoImpl categoryDAO;
 		categoryDAO.saveOrUpdate(category);
 	}
 		
-	public void delete(String id) {
+	public void delete(int id) {
 		categoryDAO.delete(id);
 		
 	}
-	public Category get(String id){
+	public Category get(int id){
 		return categoryDAO.get(id);
 	}
 	

@@ -17,15 +17,15 @@ public class SupplierService {
 		public List<Supplier> list(){
 			return SupplierDao.list();
 		}
-		public void saveOrUpdate(Supplier category){
-			SupplierDao.saveOrUpdate(category);
+		public void saveOrUpdate(Supplier supplier){
+			SupplierDao.saveOrUpdate(supplier);
 		}
 			
-		public void delete(String id) {
+		public void delete(int id) {
 			SupplierDao.delete(id);
 			
 		}
-		public Supplier get(String id){
+		public Supplier get(int id){
 			return SupplierDao.get(id);
 		}
 		

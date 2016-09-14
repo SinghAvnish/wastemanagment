@@ -9,7 +9,7 @@
 <html>
 <head>
 
-<title>PRODUCT LIST</title>
+<title>PRODUCT VIEW</title>
 
  
  <script type="text/javascript" src="resources/js/angular.min.js"></script>
@@ -20,7 +20,7 @@
 		myApp.controller('getData', function($scope,$http,$location)
 		 { 
 			
-			$scope.productdata= ${Product};
+			$scope.productdata= ${productdetails};
 			
 		 
 		 });
@@ -35,8 +35,11 @@
 		<hr>
 
 		<div class="row">
+			<c:url var="addAction" value="/user/add"></c:url>
+
+		
 			
-			<div class="col-lg-6">
+			<div class="col-lg-6">{{productdata.id}}
 				<img style="width:40px; height:40px;" src="{{productdata.image}}" />
 			</div>
 			 <div class="col-lg-2"> 
@@ -44,8 +47,12 @@
   				<h3><span class="h3 text-uppercase">name: {{productdata.name}}</span></h3>
              	<p><span class="h4 text-info">Quantity: {{productdata.qty}}</span></p>
 				<p><span class="h4 text-danger">Price: Rs {{productdata.price}}</span>	</p>
+				<a href="CartItemadd?id={{productdata.id}}"><input type="button" value ="Add To Cart"> </a>
 				
-</div>
+				
+			
+			</div>
+			
 </div>
 </div>
  

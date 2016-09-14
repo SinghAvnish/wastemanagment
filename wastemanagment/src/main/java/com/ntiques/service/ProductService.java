@@ -26,16 +26,16 @@ public class ProductService {
 			ProductDao.saveOrUpdate(product);
 		}
 			
-		public void delete(String id) {
+		public void delete(int id) {
 			ProductDao.delete(id);
 			
 		}
-		public Product get(String id){
+		public Product get(int id){
 			return ProductDao.get(id);
 		
 		}
 		
-		public Product getView(String id){
+		public Product getView(int id){
 			return ProductDao.getView(id);
 		}
 		

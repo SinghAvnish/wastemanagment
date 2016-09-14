@@ -12,16 +12,20 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.stereotype.Component;
 
 @Component
 @Entity
 
 public class Category {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String id;
+	 @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   
+	private int id;
+	 @NotEmpty(message="Name is Compulsary")
 	private String name;
+	 @NotEmpty(message="Description is mandatory")
 	private String desc;
 	
 @ElementCollection
@@ -38,13 +42,12 @@ public void setSubcategory(Set<SubCategory> subcategory)
 	this.subcategory = subcategory;
 }
 
-	public String getId()
-	{
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
 	public String getName() {
 		return name;
 	}

@@ -19,9 +19,9 @@
 <script src="<u:url value="resources/js/controller.js" />" ></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 
-<!--  <script type="text/javascript" src="resources/js/angular.min.js"></script>
+ 
  <script type="text/javascript" src="resources/js/angular.min.js"></script>
- --><script src="<u:url value="resources/js/controller.js" />" ></script>
+ <script src="<u:url value="resources/js/controller.js" />" ></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> <script>
 		var myApp = angular.module('myApp',[]);
 		myApp.controller('getData', function($scope,$http,$location)
@@ -140,8 +140,8 @@
 						<td>{{group.id}}</td>
 						<td>{{group.name}}</td>
 						<td>{{group.desc}}</td>
-						<td><a href="<c:url value='category/edit/{{group.id}}' />">Edit</a></td>
-						<td><a href="<c:url value='category/remove/{{group.id}}' />">Delete</a></td>
+						<td><a href="<c:url value='categoryedit/{{group.id}}' />">Edit</a></td>
+						<td><a href="<c:url value='categoryremove/{{group.id}}' />">Delete</a></td>
 					</tr>
 			
 			</table>

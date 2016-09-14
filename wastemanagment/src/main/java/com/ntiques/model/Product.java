@@ -1,29 +1,58 @@
 package com.ntiques.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 @Entity
 public class Product {
+
 	@Id
-	private String id;
-	private String sub_id;
-	private String supplier_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+	private int id;
+	private int sub_id;
+	private int supplier_id;
 	@NotEmpty(message="Name is compulsory")
 	private String name;
+	
+	public void setSub_id(int sub_id) {
+		this.sub_id = sub_id;
+	}
+
+
+	public void setSupplier_id(int supplier_id) {
+		this.supplier_id = supplier_id;
+	}
+
+
 	@NotEmpty(message="Description is compulsory")
 	private String desc;
-	
+	@NotNull
 	private int qty;
-    @Transient
+   
+	public int getQty() {
+		return qty;
+	}
+
+
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
+
+
+	@Transient
 	private MultipartFile image;
-	
+	@NotNull(message="price is compulsary")
 	private int price;
+	
 	@ManyToOne
 	@JoinColumn(name="sub_id", insertable=false, updatable=false, nullable=false)
 	SubCategory subcategory;
@@ -32,33 +61,45 @@ public class Product {
 	Supplier supplier;
 
 		
-	public String getId() {
+	
+
+	
+
+
+	public int getId() {
 		return id;
 	}
 
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
 
-	public String getSub_id() {
+
+
+	public int getSub_id() {
 		return sub_id;
 	}
 
 
-	public void setSub_id(String sub_id) {
-		this.sub_id = sub_id;
-	}
-
-
-	public String getSupplier_id() {
+	public int getSupplier_id() {
 		return supplier_id;
 	}
 
 
-	public void setSupplier_id(String supplier_id) {
-		this.supplier_id = supplier_id;
+	
+
+	
+
+	
+	public int getPrice() {
+		return price;
+	}
+
+
+	public void setPrice(int price) {
+		this.price = price;
 	}
 
 
@@ -82,15 +123,6 @@ public class Product {
 	}
 
 
-	public int getQty() {
-		return qty;
-	}
-
-
-	public void setQty(int qty) {
-		this.qty = qty;
-	}
-
 
 	public MultipartFile getImage() {
 		return image;
@@ -102,14 +134,7 @@ public class Product {
 	}
 
 
-	public int getPrice() {
-		return price;
-	}
 
-
-	public void setPrice(int price) {
-		this.price = price;
-	}
 
 
 	public SubCategory getSubcategory() {

@@ -1,6 +1,7 @@
  <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 
     pageEncoding="ISO-8859-1"%>
+    <%@ include file="/WEB-INF/views/header.jsp"%>
     <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -41,7 +42,7 @@
  
 <div class="container" style="background-color: lightgrey;">
 	<c:if test="${!empty productList}">
-		<div class="table-responsive" style="border-left: 2px solid red;">
+		<div class="table-responsive" style="border-left 2px solid red;">
 
 			<table class="table table-hover">
 				<tr>
@@ -59,7 +60,7 @@
 					
 				</tr>
 			
-					 <tr  ng-repeat="group in productdata | filter:searchKeyword">
+					 <tr  ng-repeat="group in productdata ">
 					    <td>{{group.id}}</td>
 					    <td>{{group.sub_id}}</td>
 					    <td>{{group.supplier_id}}</td>
@@ -69,13 +70,13 @@
 						<td>{{group.qty}}</td>
 						<td>{{group.price}}</td>
 			           	<td><a href="<c:url value='/productview{{group.id}}' />">View</a></td>
-			           <td><a href="<c:url value='/productedit{{group.id}}' />">Edit</a></td>
+			           <td><a href="<c:url value='/product/edit/{{group.id}}' />">Edit</a></td>
 						<td><a href="<c:url value='/productremove/{{group.id}}' />">Delete</a></td>
 					</tr> 
 			</table>
-		</div>
-	</c:if>
-</div>
+		</c:if>
+	</div>
+	</div>
  
 
 </body>

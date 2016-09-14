@@ -45,8 +45,8 @@ public class CategoryController {
 		
 	}
 	
-	@RequestMapping("category/remove/{id}")
-    public String deleteCategory(@PathVariable("id") String id,ModelMap model) throws Exception{
+	@RequestMapping("categoryremove/{id}")
+    public String deleteCategory(@PathVariable("id") int id,ModelMap model) throws Exception{
 		
        try {
 		categoryService.delete(id);
@@ -58,8 +58,8 @@ public class CategoryController {
         return "redirect:/categories";
     }
  
-    @RequestMapping("category/edit/{id}")
-    public String editCategory(@PathVariable("id") String id, Model model){
+    @RequestMapping("categoryedit/{id}")
+    public String editCategory(@PathVariable("id") int id, Model model){
     	System.out.println("editCategory");
         model.addAttribute("category", this.categoryService.get(id));
         model.addAttribute("listCategories", this.categoryService.list());

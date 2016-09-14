@@ -35,11 +35,13 @@ public class ProductDaoImpl implements ProductDao {
 		
 		return listProduct;
 	}
-	public void saveOrUpdate(Product product) {
+	public void saveOrUpdate(Product product) 
+	{
+		
 		sessionFactory.getCurrentSession().saveOrUpdate(product);
 	}
 
-	public void delete(String id) {
+	public void delete(int id) {
 		Product productToDelete = new Product();	
 		productToDelete.setId(id);
 		sessionFactory.getCurrentSession().delete(productToDelete);
@@ -47,7 +49,7 @@ public class ProductDaoImpl implements ProductDao {
 
 
 	
-	public Product get(String id) {
+	public Product get(int id) {
 		
 		String hql = "from Product where id=" + "'"+ id +"'";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
@@ -62,7 +64,7 @@ public class ProductDaoImpl implements ProductDao {
 		return null;
 	}
 	
-     public Product getView(String id) {
+     public Product getView(int id) {
 		
 		String hql = "from Product where id=" + "'"+ id +"'";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);

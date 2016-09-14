@@ -53,7 +53,7 @@
 					<th width="60">Delete</th>
 				</tr>
 			
-					<tr  ng-repeat="group in subcategorydata | filter:searchKeyword" >
+					<tr  ng-repeat="group in subcategorydata">
 						<td>{{group.id}}</td>
 						<td>{{group.cat_id}}</td>
 						<td>{{group.name}}</td>

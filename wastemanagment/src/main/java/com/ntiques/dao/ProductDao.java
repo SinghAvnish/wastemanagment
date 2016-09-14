@@ -9,11 +9,11 @@ import com.ntiques.model.Product;
 	{
 	public void saveOrUpdate(Product product);
 
-	public void delete(String id);
+	public void delete(int id);
 
-	public Product get(String id);
+	public Product get(int id);
 	
-	public Product getView(String id);
+	public Product getView(int id);
 
 
 	public Product getByName(String name);

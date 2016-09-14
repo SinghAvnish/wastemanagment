@@ -23,11 +23,11 @@ public class SubCategoryService {
 			SubCategoryDao.saveOrUpdate(subcategory);
 		}
 			
-		public void delete(String id) {
+		public void delete(int id) {
 			SubCategoryDao.delete(id);
 			
 		}
-		public SubCategory get(String id){
+		public SubCategory get(int id){
 			return SubCategoryDao.get(id);
 		}
 		

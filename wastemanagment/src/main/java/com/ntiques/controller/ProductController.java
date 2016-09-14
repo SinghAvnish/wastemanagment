@@ -62,10 +62,12 @@ public class ProductController {
 			
 			Supplier supplier = supplierservice.getByName(product.getSupplier().getName());
 			supplierservice.saveOrUpdate(supplier);
+			
 			product.setSupplier(supplier);
 			product.setSubcategory(subcategory);
 			product.setSub_id(subcategory.getId());
 			product.setSupplier_id(supplier.getId());
+			
 			productservice.saveOrUpdate(product);
 			
 			MultipartFile image = product.getImage();
@@ -90,12 +92,13 @@ public class ProductController {
 	
 
 	@RequestMapping("/productremove/{id}")
-    public String deleteproduct(@PathVariable("id") String id,ModelMap model) throws Exception{
+    public String deleteproduct(@PathVariable("id") int id,ModelMap model) throws Exception{
 		
        try {
 		productservice.delete(id);
 		model.addAttribute("message","Successfully Deleted");
-	} catch (Exception e) {
+	} catch (Exception e) 
+       {
 		model.addAttribute("message",e.getMessage());
 		e.printStackTrace();
 	}
@@ -106,20 +109,24 @@ public class ProductController {
 
 
 	 @RequestMapping("/productview{id}")
-	    public String viewproduct(@PathVariable("id") String id, Model model){
+	    public String viewproduct(@PathVariable("id") int id, Model model){
 	    	System.out.println("View");
-	        model.addAttribute("Product", this.productservice.get(id));
+	        model.addAttribute("product", this.productservice.get(id));
 	        model.addAttribute("productdetails", this .productservice.get(id));
 	        return "viewproduct";
 	    }
 	 
 	 
-	 @RequestMapping("productedit/{id}")
-		public String editproduct(@PathVariable("id") String id, Model model) {
+	 @RequestMapping("product/edit/{id}")
+		public String editproduct(@PathVariable("id") int id, Model model) {
 			System.out.println("editProduct");
 			model.addAttribute("product", this.productservice.get(id));
 			model.addAttribute("productList", this.productservice.list());
-			return "productlist";
+			model.addAttribute("SubCategoryList", this .subcategoryService.list());
+			model.addAttribute("supplierList", this .supplierservice.list());
+			
+			
+			return "product";
 		}
 		
   

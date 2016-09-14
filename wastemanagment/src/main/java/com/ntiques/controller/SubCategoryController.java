@@ -44,6 +44,7 @@ public class SubCategoryController {
 				else {
 					Category category = categoryService.getByName(subcategory.getCategory().getName());
 					categoryService.saveOrUpdate(category);  
+					
 					subcategory.setCategory(category);
 					subcategory.setCat_id(category.getId());
 					subcategoryService.saveOrUpdate(subcategory);
@@ -53,7 +54,7 @@ public class SubCategoryController {
 				
    }
 			@RequestMapping("subcategory/remove/{id}")
-		    public String deleteSubCategory(@PathVariable("id") String id,ModelMap model) throws Exception{
+		    public String deleteSubCategory(@PathVariable("id") int id,ModelMap model) throws Exception{
 				
 		       try {
 				subcategoryService.delete(id);
@@ -67,7 +68,7 @@ public class SubCategoryController {
 		    }
 		 
 		    @RequestMapping("subcategory/edit/{id}")
-		    public String editSubCategory(@PathVariable("id") String id, Model model){
+		    public String editSubCategory(@PathVariable("id") int id, Model model){
 		    	System.out.println("editSubCategory");
 		        model.addAttribute("subcategory", this.subcategoryService.get(id));
 		        model.addAttribute("subcategoryList", this.subcategoryService.list());

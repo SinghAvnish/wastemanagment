@@ -25,14 +25,7 @@ public class SupplierController {
 	
 	
 	
-	/*@RequestMapping(value = "/onLoad", method = RequestMethod.GET)
-	public String onLoad(Model model) {
-		System.out.println("onLoad");
-		model.addAttribute("Supplier", new Supplier());
-		model.addAttribute("SupplierList", this.SupplierService.list());
-		return "/Home";
-	}
-	*/
+	
 	
 	@RequestMapping(value = "/suppliers",method = RequestMethod.GET)
 	public String listCategories(Model model) {
@@ -52,7 +45,7 @@ public class SupplierController {
 	}
 	
 	@RequestMapping("supplier/remove/{id}")
-    public String deleteSupplier(@PathVariable("id") String id,ModelMap model) throws Exception{
+    public String deleteSupplier(@PathVariable("id") int id,ModelMap model) throws Exception{
 		
        try {
 		SupplierService.delete(id);
@@ -66,7 +59,7 @@ public class SupplierController {
     }
  
     @RequestMapping("supplier/edit/{id}")
-    public String editSupplier(@PathVariable("id") String id, Model model){
+    public String editSupplier(@PathVariable("id") int id, Model model){
     	System.out.println("editSupplier");
         model.addAttribute("supplier", this.SupplierService.get(id));
         model.addAttribute("listSuppliers", this.SupplierService.list());

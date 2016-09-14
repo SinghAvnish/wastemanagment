@@ -1,26 +1,33 @@
 package com.ntiques.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.NotEmpty;
 
-@Entity 
+@Entity
 @Table(name="Supplier")
 
 
 public class Supplier {
 
 	
-	@Id
-	private String id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+    @NotEmpty(message="Name is Complulsary")
 	private String name;
+    @NotEmpty(message="Address is compulsary")
 	private String address;
 	
-	public String getId() {
+	
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getName() {
