@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>PRODUCT LIST</title>
+<title>CARTITEMLIST</title>
  
  <script type="text/javascript" src="resources/js/angular.min.js"></script>
  <script src="<u:url value="resources/js/controller.js" />" ></script>
@@ -32,17 +32,17 @@
   <body ng-app="myApp" ng-controller="getData">  
 <!-- <div class="jumbotron"> -->
 <div class="container" >
-	<h2>
-		<center>Add Product</center>
-		
-	</h2>
 
- <h3>Product List</h3>
+
+ <h3><canter>Cart Item List</canter></h3>
  <br>
  
-<div class="container" style="background-color: lightgreen;">
+<div class="container" style="background-color: lightgrey;">
+	
+	<form:form class="form-horizontal" role="form" action="${addAction}"  commandName="cartitem">
+			
 	<c:if test="${!empty cartItemlist}">
-		<div class="table-responsive" style="border-left 2px solid red;">
+		<div class="table-responsive" style="border-all 2px solid red;">
 
 			<table class="table table-hover">
 				<tr>
@@ -50,11 +50,11 @@
 					<th width="80">CartID</th>
 					<th width="80">ProductID</th>
 					<th width="120">Product Name</th>
-					<th width="120">Price/th>
+					<th width="120">Price</th>
 					<th width="120">Quantity</th>
 				</tr>
 			
-					 <tr  ng-repeat="group in cartItemdata ">
+					 <tr ng-repeat="group in cartItemdata ">
 					    <td>{{group.cartitemid}}</td>
 					    <td>{{group.cartid}}</td>
 					    <td>{{group.prodid}}</td>
@@ -64,6 +64,7 @@
 			        </tr> 
 			</table>
 		</c:if>
+	</form:form>
 	</div>
 	</div>
  

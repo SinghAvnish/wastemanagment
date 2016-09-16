@@ -87,7 +87,7 @@
       </ul>
       <ul class="nav navbar navbar-right" >
       <sec:authorize access="isAnonymous()">
-       <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>Signin</a></li>
+       <li><a href="login" style="margin:50;"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
       </sec:authorize>
       <c:if test="${pageContext.request.userPrincipal.name!= null}">
 		<h2>
@@ -99,7 +99,7 @@
         </sec:authorize>
         <sec:authorize access="isAnonymous()">
 		<li><a href="users"><span class="glyphicon glyphicon-user"></span>Signup</a></li>
-		<li><a href="users"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
+		<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
 		</sec:authorize>
       </ul>
       </div>

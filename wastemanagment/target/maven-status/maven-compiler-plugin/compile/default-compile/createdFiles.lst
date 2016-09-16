@@ -8,6 +8,7 @@ com\ntiques\dao\CartDaoImpl.class
 com\ntiques\controller\ProductController.class
 com\ntiques\model\Category.class
 com\ntiques\service\SupplierService.class
+com\ntiques\handler\Demo.class
 com\ntiques\dao\SupplierDaoImp.class
 com\ntiques\dao\CartItemDaoImpl.class
 com\ntiques\model\SubCategory.class

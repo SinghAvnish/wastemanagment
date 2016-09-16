@@ -34,7 +34,7 @@ public class CartItemController {
 	public String listCategories(Model model) {
 		model.addAttribute("cartitem", new CartItem());
 		model.addAttribute("cartitemlist", this.cartitemservice.list());
-		return "cartitem";
+		return "cartitemlist";
 	}
 	
 	@RequestMapping(value= "/CartItemadd")
@@ -62,12 +62,13 @@ public class CartItemController {
 			cartItem.setProdid(id);
 			cartItem.setQuantity(1);
 			cartitemservice.saveOrUpdate(cartItem);
-			return "redirect:/";
+			return "redirect:cartitemlist";
 			}
 		
 	 		@RequestMapping("/cartitemlist")
 	 		public String getList(Model model)
 	 		{
+	 		model.addAttribute("cartitem", new CartItem());
 	    	model.addAttribute("cartItemlist", this.cartitemservice.list());
 	    	return "cartitemlist";
 

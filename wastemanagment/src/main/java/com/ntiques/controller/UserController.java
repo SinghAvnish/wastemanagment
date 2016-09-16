@@ -27,16 +27,16 @@ public class UserController {
 	@Autowired    (required=true)
 	private UserService userservice;
 
-	@RequestMapping(value = "/users",method = RequestMethod.GET)
+	/*@RequestMapping(value = "/users",method = RequestMethod.GET)
 	public String listUsers(Model model) {
 		model.addAttribute("user", new User());
 		return "user";
 	}
+	*/
 	
 	
 	
-	
-	@RequestMapping(value= "/user/add")
+	/*@RequestMapping(value= "/user/add")
 	public String addUser(@ModelAttribute("user") User user){
 		
 		user.setEnabled(true);
@@ -45,7 +45,7 @@ public class UserController {
 		
 		return "redirect:/users";
 		
-	}
+	}*/
 	
 	@RequestMapping("/login")
     public String login(@RequestParam(value="error", required = false)
@@ -72,7 +72,9 @@ public class UserController {
 	      }
 	      return "redirect:/";
 	  }
-	}	
+
+	
+}	
 
 
 

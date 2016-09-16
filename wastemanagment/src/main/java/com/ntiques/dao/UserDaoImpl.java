@@ -44,6 +44,8 @@ public class UserDaoImpl implements UserDao {
 		session.saveOrUpdate(user);
 		cart.setUserId(user.getUserId());
 		session.saveOrUpdate(cart);
+		user.setEnabled(true);
+		user.setRole("ROLE_USER");
 		session.flush();
 		
  }

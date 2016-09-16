@@ -87,7 +87,7 @@
       </ul>
       <ul class="nav navbar navbar-right" >
       <sec:authorize access="isAnonymous()">
-       <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>Signin</a></li>
+       <li><a href="memberShip.obj" style="margin:50;"><span class="glyphicon glyphicon-log-in"></span>Signin</a></li>
       </sec:authorize>
       <c:if test="${pageContext.request.userPrincipal.name!= null}">
 		<h2>

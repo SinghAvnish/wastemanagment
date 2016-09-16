@@ -87,7 +87,11 @@ public class CartItem {
 	}
 	
 	
+
 	
-	
-	
+	public String toString()
+	{
+		
+		return "{cartitemid : '" + cartitemid + "'," + "cartid : '" + cartid +"', "+"prodid : '" + prodid + "'," + "prodname :'" + prodname + "'," + "price:'" + price + "',"+"quantity :'" + quantity + "',}";
+	}
 }
