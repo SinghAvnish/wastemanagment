@@ -40,7 +40,7 @@ public class SupplierController {
 	
 			SupplierService.saveOrUpdate(Supplier);
 		
-		return "redirect:/suppliers";
+		return "redirect:/supplierlist";
 		
 	}
 	
@@ -64,6 +64,14 @@ public class SupplierController {
         model.addAttribute("supplier", this.SupplierService.get(id));
         model.addAttribute("listSuppliers", this.SupplierService.list());
         return "supplier";
+    }
+    
+    @RequestMapping("/supplierlist")
+    public String getList(Model model){
+    	model.addAttribute("supplierlist", this.SupplierService.list());
+    	return "supplierlist";
+
+    	
     }
 
 

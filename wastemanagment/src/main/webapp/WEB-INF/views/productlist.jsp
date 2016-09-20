@@ -33,27 +33,28 @@
 <!-- <div class="jumbotron"> -->
 <div class="container" >
 	<h2>
-		<center>Add Product</center>
+		<center>Product List</center>
 		
 	</h2>
 
- <h3>Product List</h3>
+ 
  <br>
  
-<div class="container" style="background-color: lightgrey;">
+<div class="container" style="background-color:white;">
 	<c:if test="${!empty productList}">
-		<div class="table-responsive" style="border-left 2px solid red;">
+		<div class="table-responsive">
 
-			<table class="table table-hover">
+			<table class="table">
+			
 				<tr>
-				     <th width="80">Product ID</th>
+				    <th width="80">Product ID</th>
 					<th width="80">Sub_Category ID</th>
 					<th width="80">Supplier ID</th>
 					<th width="120">Product Name</th>
 					<th width="120">Image</th>
 					<th width="120">Product Description</th>
 					<th width="120">Quantity</th>
-					<th width="120">Price</th>>
+					<th width="120">Price</th>
 					<th width="120">View</th>
 					<th width="120">Edit</th>
 					<th width="120">Delete</th>
@@ -77,7 +78,7 @@
 		</c:if>
 	</div>
 	</div>
- 
+ </
 
 </body>
 </html>  

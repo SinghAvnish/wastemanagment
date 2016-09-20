@@ -32,16 +32,15 @@
                 <table border="0">
 				<tr>
 			
-				 <td colspan="2" align="center"><h2>User Registration Here</h2></td>
+				 <td colspan="2" align="center"><h2> Register Here </h2></td>
 				</tr>
 				<tr><td>User Name:</td>
 				<td><form:input path="username" /></td>
 				</tr>
-				
-				<tr><td>ENABLED:</td>
+				<tr><td>Enabled:</td>
 				<td><form:input path="enabled" /></td>
-				</tr>	
-		         <tr><td>ROLE</td>
+				</tr>
+				<tr><td>Role:</td>
 				<td><form:input path="role" /></td>
 				</tr>
 				<tr><td>Password:</td>

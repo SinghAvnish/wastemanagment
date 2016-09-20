@@ -22,9 +22,9 @@
 </head>
 <body>
 
-<div class="container" style="background-color: lavenderblush;">
+<div class="container" style="background-color:;">
 	<h2>
-		<center>Add Sub Category</center>
+		<center>Add SubCategory</center>
 		
 	</h2>
 	<center>

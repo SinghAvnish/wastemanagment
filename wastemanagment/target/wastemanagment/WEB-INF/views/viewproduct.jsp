@@ -39,10 +39,10 @@
 
 		
 			
-			<div class="col-lg-6">{{productdata.id}}
-				<img style="width:40px; height:40px;" src="{{productdata.image}}" />
+			<div class="col-lg-6"  align="left">
+				<img style="width:100px; height:100px;" src="{{productdata.image}}" />
 			</div>
-			 <div class="col-lg-2"> 
+			 <div class="col-lg-2" align="right"> 
 			
   				<h3><span class="h3 text-uppercase">name: {{productdata.name}}</span></h3>
              	<p><span class="h4 text-info">Quantity: {{productdata.qty}}</span></p>

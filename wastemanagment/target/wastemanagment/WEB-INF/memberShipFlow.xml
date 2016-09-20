@@ -7,32 +7,34 @@
  
 	<!-- Executed when webFlow is triggered -->
 	<on-start>
-	 <evaluate expression="Demo.initFlow()" result="flowScope.user"/>
+	 <evaluate expression="demo.initFlow()" result="flowScope.user"/>
 	</on-start>
  
 	 <!-- if not specified the first view state is the starting state -->
 	<view-state id="start" view="user" model="flowScope.user">
-	   <transition on="submit" to="confirmDetails"/>
+	   <transition on="submit" to="add"/>
 	</view-state>
  
-	<!-- <action-state id="validate">
-		<evaluate expression="demohandler.validateDetails(userBean,messageContext)"></evaluate>
+	<action-state id="add">
+		<evaluate expression="userService.saveOrUpdate(user)"></evaluate>
 		<transition on="success" to="confirmDetails" />
 		<transition on="failure" to="start" />
 	</action-state>
-  -->
+  
 	<view-state id="confirmDetails" view="confirmDetails" model="flowScope.user">
 		<transition on="edit" to="start" />
 		<transition on="submit" to="welcome" />
 	</view-state>
- 
-	<end-state id="welcome" view="externalRedirect:contextRelative:home.jsp" />
-	<end-state id="toHome" view="externalRedirect:contextRelative:home.jsp" />
+	
+	 <!-- <view-state id="home" view="home" model="flowScope.user">
+		<transition on="Home" to="home" />
+		</view-state> 
+  -->
+	<end-state id="welcome" view="home" />
+	
 	<!-- <end-state id="toException" view="externalRedirect:contextRelative:exception.jsp" />
   -->
-	<!-- these events are available in every state-->
 	<global-transitions>
-		<transition on="home" to="toHome" />
-		<!-- <transition on="error" to="toException" /> -->
+		<transition on="Home" to="toHome"/>
 	</global-transitions>
 </flow>

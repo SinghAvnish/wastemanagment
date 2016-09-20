@@ -18,8 +18,8 @@
  
   <style>
   .carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    width: 80%;
-    height:60%;
+    width: 100%;
+    height:100%;
 }
 .navbar {
       margin-bottom: 0;
@@ -51,7 +51,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Ntique</a>
+      <a class="navbar-brand" href="/wastemanagment/">Ntique</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="/wastemanagment/">Home</a></li>
@@ -68,7 +68,6 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
       <a class="navbar-brand" href="#">Ntiques</a>
-    </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -85,13 +84,16 @@
         </li>
         </c:forEach>
       </ul>
-      <ul class="nav navbar navbar-right" >
-      <sec:authorize access="isAnonymous()">
-       <li><a href="memberShip.obj" style="margin:50;"><span class="glyphicon glyphicon-log-in"></span>Signin</a></li>
+      </div>
+      </ul>
+      </div>
+    <ul class="nav navbar-nav navbar-right">
+       <sec:authorize access="isAnonymous()">
+       <li><a href="login" style="margin:50;"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
       </sec:authorize>
       <c:if test="${pageContext.request.userPrincipal.name!= null}">
 		<h2>
-			Welcome  ${pageContext.request.userPrincipal.name}
+			Welcome ${pageContext.request.userPrincipal.name}
 		</h2>
        </c:if>
         <sec:authorize access="isAuthenticated()">
@@ -99,9 +101,8 @@
         </sec:authorize>
         <sec:authorize access="isAnonymous()">
 		<li><a href="users"><span class="glyphicon glyphicon-user"></span>Signup</a></li>
-		<li><a href="users"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
-		</sec:authorize>
-      </ul>
+		<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
+		</sec:authorize> </ul>
       </div>
  </nav> 
      
@@ -118,10 +119,9 @@
    
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="resources/images/Jellyfish.jpg" alt="Image">
+        <img src="resources/images/C.jpg" alt="Image">
         <div class="carousel-caption">
-          <h3>Sell $</h3>
-          <p>Money Money.</p>
+         
         </div>
       </div>
 
@@ -129,11 +129,11 @@
         <img src="resources/images/bed1.jpg" alt="Image">
         <div class="carousel-caption">
           <h3></h3>
-          <p>Lorem ipsum...</p>
+        
         </div>
       </div>
        <div class="item">
-        <img src="resources/images/4.jpg" alt="Image">
+        <img src="resources/images/table4.jpg" alt="Image">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
@@ -185,11 +185,9 @@
       <h3>Our Company</h3>
         <ul>
           <li><a href="about-us">About Us</a></li>
-          <li><a href="careers">Careers</a></li>
-          <li><a href="blog">Blog</a></li>
+          <li><a href="careers">Contact Us</a></li>
+          <li><a href="blog">Gallaries</a></li>
           <li><a href="media">Media</a></li>
-          <li><a href="custom-furniture">Custom Furniture</a></li>
-          <li><a href="coupon-partners">Coupon Partners</a></li>
           <li><a href="customer-reviews">Customer Reviews</a></li>
           <li><a href="get-in-touch">Get in Touch</a></li>
         </ul>
@@ -202,10 +200,7 @@
           <ol><a href="return-and-refunds">Return &amp; Refunds</a></ol>
           <ol><a href="terms-and-conditions">Terms &amp; Conditions </a></ol>
           <ol><a href="security-and-privacy">Security &amp; Privacy</a></ol>
-          <ol><a href="track-orders">Track Order</a></ol>
-          <ol><a href="buying-guide">Buying Guide</a></ol>
-          <ol><a href="compare-woods">Type Of Wood</a></ol>
-        </ul>
+         
       </div> 
       <div class="col-sm-3"   align="justify" style="background-color:light-grey;">
       
@@ -224,35 +219,24 @@
           </div>    
           <div class="col-sm-3"   align="justify"style="background-color:light-grey;">
         
-        <div >Top Categories</div>
-        <ul>
-          <li><a href="interior-designers">Interior Designers</a></li>
-          <li><a href="living-room-furniture">Living Room Furniture</a></li>
-          <li><a href="dining-furniture">Dining Furniture</a></li>
-          <li><a href="bedroom-furniture">Bedroom Furniture</a></li>
-          <li><a href="storage-furniture">Storage Furniture</a></li>
-          <li><a href="outdoor-furniture">Outdoor Furniture</a></li>
-          <li><a href="kids-furniture">Kids Furniture</a></li>
-          <!--<li><a href="home-decors">Home Decor</a></li>-->
-        </ul>
-      </div>
+      
       
         <article class="social">
         <div class="footer_two_title">Follow <span>Ntiques</span></div>
         <table>
         <div    align="justify"style="background-color:light-grey;">
           <ul>
-          <th> <a target="_blank" rel="nofollow" href="https://www.facebook.com/Woodenstreet" title="Facebook" class="facebook"><img src="images/LOGO.jpg" alt="Facebook" /></a></li></ul></th>
-           <th><a  rel="nofollow" href="https://twitter.com/Woodenstreet1" target="_blank" title="Twitter" class="twitter"><img src="images/twitter.svg" alt="Twitter" /></a></li><
-            <th><a href="https://plus.google.com/+WoodenstreetOfficial/" title="Google+" target="_blank" class="google-plus"><img src="images/google.svg" alt="Google Plus" /></a><td>
+          <th> <a target="_blank" rel="nofollow" href="https://www.facebook.com/Ntiques" title="Facebook" class="facebook"><img src="resources/images/fb.jpg" alt="Facebook" /></a></li></ul></th>
+           <th><a  rel="nofollow" href="https://twitter.com/Woodenstreet1" target="_blank" title="Twitter" class="twitter"><img src="resources/images/twitter.jpg" alt="Twitter" /></a></li><
+            <th><a href="https://plus.google.com/+/" title="Google+" target="_blank" class="google-plus"><img src="images/google.svg" alt="Google Plus" /></a><td>
         </ul>
         
         </div>
         </table>
       </article>
       <div>
-       <article class="top-categroy clearfix"> 
-        <!--Start Top Searches-->
+       <!-- <article class="top-categroy clearfix"> 
+        Start Top Searches
                 <p>Top Furniture Searches:</p> 
                 <a href="bar-furniture">Bar Furniture</a>
                 <a href="bar-stools">Bar Stools</a>
@@ -265,19 +249,9 @@
                 <a href="double-beds">Double Bed</a>
                 <a href="extendable-dining-table-sets">Extendable dining table</a>
                 <a href="fabric-sofas">Fabric Sofas</a>
-                <a href="kitchen-cabinets">Kitchen Cabinets</a>
-                <a href="kitchen-trolley">Kitchen Trolley</a>
-                <a href="corner-sofas">L Shaped Corner Sofa</a>
-                <a href="single-beds">Single Bed</a>
-                <a href="sofa-cum-beds">Sofa Cum Bed</a>
-                <a href="sofa-sets">Sofa Set</a>
-                <a href="study-tables">Study Table</a>
-                <a href="tables">Table</a>
-                <a href="tv-units">TV Units</a>
-                <a href="wine-racks">Wine Rack</a>
-                <a href="wooden-sofa">Wooden Sofa</a>
-                <!--End Top Searches--> 
-      </article>
+          
+                End Top Searches 
+      </article> -->
       </div>             
       
         

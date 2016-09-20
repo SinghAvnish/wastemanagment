@@ -28,7 +28,6 @@ public class User implements Serializable
 	@Size(min=8, max=25)
 	private String password;
 	private Boolean enabled;
-	@NotNull
 	private String role;
 	@Email
 	private String email;

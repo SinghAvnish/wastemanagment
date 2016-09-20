@@ -37,14 +37,14 @@
  <h3><canter>Cart Item List</canter></h3>
  <br>
  
-<div class="container" style="background-color: lightgrey;">
+<div class="container" style="background-color:;">
 	
 	<form:form class="form-horizontal" role="form" action="${addAction}"  commandName="cartitem">
 			
 	<c:if test="${!empty cartItemlist}">
-		<div class="table-responsive" style="border-all 2px solid red;">
+		<div class="table-responsive">
 
-			<table class="table table-hover">
+			<table class="table">
 				<tr>
 				    <th width="80">CartItemId</th>
 					<th width="80">CartID</th>
