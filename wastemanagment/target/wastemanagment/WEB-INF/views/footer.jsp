@@ -10,69 +10,57 @@
 <title>Insert title here</title>
 </head>
 <body>
-<footer class="container-fluid text-center">
-  	<div class ="row">
-        <div class="col-sm-3" align="justify"  style="background-color:light-grey;">
-      
-      <h3>OUR Antiques</h3>
-       <p>We are passionate about great quality, classic style Antiques. Taking inspiration from 18th–20th century art and architecture, we aspire to sell it to for 21st century residential and commercial spaces.</p> </div>
-     
-       <div class="col-sm-3"  align="justify" style="background-color:light-grey;">
-        <h3>OUR PHILOSOPHY</h3>
-       	<p>We believe that excellent quality does not necesarily mean a hefty price tag.  We’d like to bring back the element of craftsman-ship in today’s mass produced consumer market.</p>
-		</div></div>
-      </div> 
-      
-      <div class="col-sm-3"   align="justify" style="background-color:light-grey;">
-      
-        <div>CONTACT US</div>
-        <div class="textwidget">Avnish Singh +91 98200 12330<br>
-<br>
-Antiques Online<br>
-Office 6 , Level 2, 15 LBS<br>
-Phoenix Market City, LBS Marg<br>
-Kurla (W), Mumbai 400070.<br></div>
-		</div></div>
-    </div>
+<footer>
+  	
+  <div class="row">
+    <div class="col-sm-4">
+    
+   <h4>Our Antiques</h4>
+   <p>We are passionate about great quality classic style Antiques Taking inspiration from 18th and 20th century art and architecture we aspire to sell it to for 21st century residential and commercial spaces.</p>
+  
+   <i class="fa fa-facebook-square" style="font-size:35px"></i>
+	<i class="fa  fa-google-plus-square" style="font-size:35px"></i>
+	<i class="fa fa-twitter-square" style="font-size:35px"></i>
+	<i class="fa  fa-linkedin-square" style="font-size:35px"></i> 
+   </div>
+   
+    <div class="col-sm-4">
+    <h4>OUR PHILOSOPHY</h4>
+   <p>We believe that excellent quality does not necessarily mean a hefty price tag.  We would like to bring back the element of craftsmanship in todays mass produced consumer market.</p>
+</div>
+
+	<div class="col-sm-4">
+    <h4>Contact Us</h4>
+   <div class="textwidget">Avnish Singh: +91 98200 12330
+<br><b>Antiques Online</b><br>
+Office 6  Level 2 15 LBS<br>
+Phoenix Market City LBS Marg<br>
+Kurla (W) Mumbai 400007.<br>
+</div>
+<table align="">
+ <ul class="social" >
+ <th><a href="http://www.twitter.com/#" target="_blank"><img src="http://bombayfurniture.in/wp-content/themes/vintage/images/icons/twitter-16x16.png" alt=""></a></th>
+ <th><a href="http://www.facebook.com/#" target="_blank"><img src="http://bombayfurniture.in/wp-content/themes/vintage/images/icons/facebook-16x16.png" alt=""></a></th>
+ <th><a href="http://www.linkedin.com/#" target="_blank"><img style="opacity: 1;" src="http://bombayfurniture.in/wp-content/themes/vintage/images/icons/linkedin-16x16.png" alt=""></a></th>
+ </ul>
+ </table>
+
+</div><br>
+ 
+		
+		</div>
        
-     </div>    
+ <div>
+  </div> 
+ <div id="copyrights">
+        <h5><center>Copyright @ 2012 Ntique online Company. All Rights Reserved</center></h5>
+    </div>
+    
+       
           
         
-      
-      
-        <article class="social">
-        <div class="footer_two_title">Follow <span>Ntiques</span></div>
-        <table>
-        <div    align="justify"style="background-color:light-grey;">
-          <ul>
-          <th> <a target="_blank" rel="nofollow" href="https://www.facebook.com/Ntiques" title="Facebook" class="facebook"><img src="images/LOGO.jpg" alt="Facebook" /></a></li></ul></th>
-           <th><a  rel="nofollow" href="https://twitter.com/Woodenstreet1" target="_blank" title="Twitter" class="twitter"><img src="images/twitter.svg" alt="Twitter" /></a></li><
-            <th><a href="https://plus.google.com/+/" title="Google+" target="_blank" class="google-plus"><img src="images/google.svg" alt="Google Plus" /></a><td>
-        </ul>
         
-        </div>
-        </table>
-      </article>
-      <div>
-      <!--  <article class="top-categroy clearfix"> 
-        Start Top Searches
-                <p>Top Furniture Searches:</p> 
-                <a href="bar-furniture">Bar Furniture</a>
-                <a href="bar-stools">Bar Stools</a>
-                <a href="beds">Beds</a>
-                <a href="bookshelves">Book shelf</a>
-                <a href="chairs">Chairs</a>
-                <a href="computer-tables">Computer Table</a>
-                <a href="dining-tables">Dining Table</a>
-                <a href="dining-table-sets">Dining Table Set</a>
-                <a href="double-beds">Double Bed</a>
-                <a href="extendable-dining-table-sets">Extendable dining table</a>
-                <a href="fabric-sofas">Fabric Sofas</a>
-          
-                End Top Searches 
-      </article> -->
-      </div>             
-      
+     
         
               
   

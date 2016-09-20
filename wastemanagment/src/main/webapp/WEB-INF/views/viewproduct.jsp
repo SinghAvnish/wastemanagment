@@ -8,7 +8,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
 <title>PRODUCT VIEW</title>
 
  
@@ -33,29 +37,22 @@
 <div class="container">
 		<h1 class="title">Product Details</h1>
 		<hr>
-
+<c:url var="addAction" value="/user/add"></c:url>
 		<div class="row">
-			<c:url var="addAction" value="/user/add"></c:url>
-
-		
-			
-			<div class="col-lg-6"  align="left">
-				<img style="width:100px; height:100px;" src="{{productdata.image}}" />
-			</div>
-			 <div class="col-lg-2" align="right"> 
-			
-  				<h3><span class="h3 text-uppercase">name: {{productdata.name}}</span></h3>
-             	<p><span class="h4 text-info">Quantity: {{productdata.qty}}</span></p>
-				<p><span class="h4 text-danger">Price: Rs {{productdata.price}}</span>	</p>
+		<div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+     		 <img style="width:30%; height:30%;" src="{{productdata.image}}" />
+     		 </div>
+   		<div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+   		<h3 ><span class="h3 text-uppercase">Name: {{productdata.name}}</span></h3>
+             	<p><span>Quantity: {{productdata.qty}}</span></p>
+				<p><span>Price: {{productdata.price}} Rs</span>	</p>
 				<a href="CartItemadd?id={{productdata.id}}"><input type="button" value ="Add To Cart"> </a>
-				
-				
-			
-			</div>
-			
-</div>
-</div>
+		</div>
+		</div>
  
 
 </body>
+<footer>
+  <%@ include file="/WEB-INF/views/footer.jsp"%>
+  </footer>
 </html>  

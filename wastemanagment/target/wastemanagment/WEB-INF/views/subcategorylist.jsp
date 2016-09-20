@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>SUB CATEGORIES LIST</title>
+<title>SUBCATEGORY LIST</title>
 
  <script type="text/javascript" src="resources/js/angular.min.js"></script>
  <script type="text/javascript" src="resources/js/angular.min.js"></script>
@@ -38,12 +38,12 @@
 
   <body ng-app="myApp" ng-controller="getData">  
 
-<div class="container" style="background-color: lightgrey;">
-	<h3>Sub Category List</h3>
+<div class="container" style="background-color:;">
+	<h2><center>SubCategory List</center></h2>
 	<c:if test="${!empty subcategoryList}">
 		<div class="table-responsive" >
 
-			<table class="table table-bordered" style="border-left: 2px solid red;" />
+			<table class="table">
 				<tr>
 					<th width="80">Sub Category ID</th>
 					<th width="80">Category ID</th>
@@ -67,6 +67,7 @@
 	</c:if>
 </div>
  
-
 </body>
+<footer> <%@ include file="/WEB-INF/views/footer.jsp"%></footer>
+
 </html>

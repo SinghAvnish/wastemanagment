@@ -33,18 +33,13 @@
 		 });
 	
 </script>
-
- 
-
-
- 
 </head>
-<!-- <body> -->
+
  <body ng-app="myApp" ng-controller="getData"> 
 <!-- <div class="jumbotron"> -->
-<div class="container" style="background-color: lavenderblush;">
+<div class="container" style="background-color:;">
 	<h2>
-		<center>Add a Category</center>
+		<center>Add Category</center>
 		
 	</h2>
 	<center>
@@ -53,18 +48,18 @@
 		<form:form class="form-horizontal" role="form" action="${addAction}"
 			commandName="category">
 			
-			
-			
 			<div id="custom-search-input">
-                            <div class="input-group col-sm-4">
-                                <input type="text" ng-model="searchKeyword" />
+                            <div class="input-group col-sm-3">
+                                <input type="text" ng-model="searchKeyword" placeholder="Search"/>
                                 <span class="input-group-btn">
-                                    <button class="btn btn-danger" type="button">
-                                        <span class=" glyphicon glyphicon-search"></span>
+                                    <button class="btn btn-danger" type="button" font size>
+                                    <span class=" glyphicon glyphicon-search"></span>
                                     </button>
                                 </span>
                             </div>
-                        </div>
+             </div>
+			
+			
 
 			<table>
 				<tr>
@@ -127,7 +122,7 @@
 	<c:if test="${!empty categoryList}">
 		<div class="table-responsive">
 
-			<table class="table table-bordered">
+			<table class="table">
 				<tr>
 					<th width="80">Category ID</th>
 					<th width="120">Category Name</th>
@@ -136,7 +131,7 @@
 					<th width="60">Delete</th>
 				</tr>
 			
-					<tr  ng-repeat="group in categorydata | filter:searchKeyword">
+					<tr  ng-repeat="group in categorydata">
 						<td>{{group.id}}</td>
 						<td>{{group.name}}</td>
 						<td>{{group.desc}}</td>

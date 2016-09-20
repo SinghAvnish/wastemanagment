@@ -22,9 +22,9 @@
 </head>
 <body>
 
-<div class="container" style="background-color: lavenderblush;">
+<div class="container" style="background-color:;">
 	<h2>
-		<center>Add Sub Category</center>
+		<center>Add SubCategory</center>
 		
 	</h2>
 	<center>
@@ -102,6 +102,7 @@
 </form:form>
 </center>
 </div>
-
 </body>
+<footer> <%@ include file="/WEB-INF/views/footer.jsp"%></footer>
+
 </html>

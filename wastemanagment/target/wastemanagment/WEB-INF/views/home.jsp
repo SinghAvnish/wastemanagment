@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+   
     <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -19,7 +20,7 @@
   <style>
   .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     width: 100%;
-    height:100%;
+    height:50%;
 }
 .navbar {
       margin-bottom: 0;
@@ -33,7 +34,7 @@
     }
     
   .carousel-inner img {
-      width: 70%; /* Set width to 100% */
+      width: 100%; /* Set width to 100% */
       margin: auto;
       height:40%;
   }
@@ -48,23 +49,24 @@
   
 </head>
 <body>
+<sec:authorize access="hasRole('ROLE_USER')">
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/wastemanagment/">Ntique</a>
+     <a class="navbar-brand" href="/wastemanagment/">Ntique</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="/wastemanagment/">Home</a></li>
-      <sec:authorize access="hasRole('ROLE_USER')">
        <li><a href="categories">Category</a></li>
       <li><a href="suppliers">Supplier</a></li>
       <li><a href="subcategories">SubCategory</a></li>
       <li><a href="products">Product</a></li>
-      </sec:authorize>
-    </ul>
+     </ul>
+   </div>
     
-  </div>
 </nav>
+</sec:authorize>
+   
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
       <a class="navbar-brand" href="#">Ntiques</a>
@@ -101,8 +103,10 @@
         </sec:authorize>
         <sec:authorize access="isAnonymous()">
 		<li><a href="users"><span class="glyphicon glyphicon-user"></span>Signup</a></li>
+		
+		</sec:authorize>
 		<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
-		</sec:authorize> </ul>
+		 </ul>
       </div>
  </nav> 
      
@@ -119,7 +123,7 @@
    
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="resources/images/C.jpg" alt="Image">
+        <img src="resources/images/c.jpg" alt="Image">
         <div class="carousel-caption">
          
         </div>
@@ -135,8 +139,6 @@
        <div class="item">
         <img src="resources/images/table4.jpg" alt="Image">
         <div class="carousel-caption">
-          <h3></h3>
-          <p></p>
         </div>
       </div>
       
@@ -152,111 +154,84 @@
       <span class="sr-only">Next</span>
     </a>
  </div>
- 
+ <div><h3 align="center">-------- Best Sellers --------</h3></div>
  <div class="row">
-  <div class="col-xs-6 col-md-3">
+ <div class="col-sm-4">
     <a href="#" class="thumbnail">
       <img src="resources/images/table4.jpg" alt="table4">
     </a>
   </div>
-  <div class="col-xs-6 col-md-3">
+  <div class="col-sm-4">
     <a href="#" class="thumbnail">
       <img src="resources/images/table5.jpg" alt="table5">
     </a>
   </div>
-  <div class="col-xs-6 col-md-3">
+  <div class="col-sm-4">
     <a href="#" class="thumbnail">
       <img src="resources/images/table6.jpg" alt="table6">
     </a>
   </div>
-  <div class="col-xs-6 col-md-3">
+   <div class="col-sm-4">
     <a href="#" class="thumbnail">
-      <img src="resources/images/table7.jpg" alt="table7">
+      <img src="resources/images/table6.jpg" alt="table6">
     </a>
   </div>
-  
-</div>
- 
- 
- <footer class="container-fluid text-center">
-  	<div class ="row">
-        <div class="col-sm-3" align="justify"  style="background-color:light-grey;">
-      
-      <h3>Our Company</h3>
-        <ul>
-          <li><a href="about-us">About Us</a></li>
-          <li><a href="careers">Contact Us</a></li>
-          <li><a href="blog">Gallaries</a></li>
-          <li><a href="media">Media</a></li>
-          <li><a href="customer-reviews">Customer Reviews</a></li>
-          <li><a href="get-in-touch">Get in Touch</a></li>
-        </ul>
-    </div>
-     
-       <div class="col-sm-3"  align="justify" style="background-color:light-grey;">
-        <h4>Customer Services</h4>
-          <ul>Our Stores</ul>
-          <ol><a href="deliveries">Deliveries</a></ol>
-          <ol><a href="return-and-refunds">Return &amp; Refunds</a></ol>
-          <ol><a href="terms-and-conditions">Terms &amp; Conditions </a></ol>
-          <ol><a href="security-and-privacy">Security &amp; Privacy</a></ol>
-         
-      </div> 
-      <div class="col-sm-3"   align="justify" style="background-color:light-grey;">
-      
-        <div>Categories</div>
-        <ul>
-          <li><a href="bookshelves">Bookshelf</a></li>
-          <li><a href="shoe-racks">Shoe Rack</a></li>
-          <li><a href="study-tables">Study Table</a></li>
-          <li><a href="coffee-tables">Coffee Table</a></li>
-          <li><a href="dining-table-sets">Dining Table Sets</a></li>
-          <li><a href="corner-sofas">Corner Sofa</a></li>
-          <li><a href="dressing-tables">Dressing Table</a></li>
-          <li><a href="dining-tables">Dining Tables</a></li>
-        </ul>
-     
-          </div>    
-          <div class="col-sm-3"   align="justify"style="background-color:light-grey;">
-        
-      
-      
-        <article class="social">
-        <div class="footer_two_title">Follow <span>Ntiques</span></div>
-        <table>
-        <div    align="justify"style="background-color:light-grey;">
-          <ul>
-          <th> <a target="_blank" rel="nofollow" href="https://www.facebook.com/Ntiques" title="Facebook" class="facebook"><img src="resources/images/fb.jpg" alt="Facebook" /></a></li></ul></th>
-           <th><a  rel="nofollow" href="https://twitter.com/Woodenstreet1" target="_blank" title="Twitter" class="twitter"><img src="resources/images/twitter.jpg" alt="Twitter" /></a></li><
-            <th><a href="https://plus.google.com/+/" title="Google+" target="_blank" class="google-plus"><img src="images/google.svg" alt="Google Plus" /></a><td>
-        </ul>
-        
+   <div class="col-sm-4">
+    <a href="#" class="thumbnail">
+      <img src="resources/images/table6.jpg" alt="table6">
+    </a>
+  </div>
+   <div class="col-sm-4">
+    <a href="#" class="thumbnail">
+      <img src="resources/images/table6.jpg" alt="table6">
+    </a>
+  </div>
+  </div>
+  <div><h3>-----Testimonials----</h3></div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+   
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="" alt="">
+        <div class="carousel-caption">
+         <p>This is to check </p>
         </div>
-        </table>
-      </article>
-      <div>
-       <!-- <article class="top-categroy clearfix"> 
-        Start Top Searches
-                <p>Top Furniture Searches:</p> 
-                <a href="bar-furniture">Bar Furniture</a>
-                <a href="bar-stools">Bar Stools</a>
-                <a href="beds">Beds</a>
-                <a href="bookshelves">Book shelf</a>
-                <a href="chairs">Chairs</a>
-                <a href="computer-tables">Computer Table</a>
-                <a href="dining-tables">Dining Table</a>
-                <a href="dining-table-sets">Dining Table Set</a>
-                <a href="double-beds">Double Bed</a>
-                <a href="extendable-dining-table-sets">Extendable dining table</a>
-                <a href="fabric-sofas">Fabric Sofas</a>
-          
-                End Top Searches 
-      </article> -->
-      </div>             
+      </div>
+
+      <div class="item">
+        <img src="" alt="Image">
+        <div class="carousel-caption">
+          <p>This is to check </p>
+        </div>
+      </div>
+       <div class="item">
+        <img src="" alt="Image">
+        <div class="carousel-caption">
+        <p>This is to check </p>
+        </div>
+      </div>
       
-        
-              
-  
+    </div>
+
+  <!--   Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+ </div>
+  <footer>
+    <%@ include file="/WEB-INF/views/footer.jsp"%>           
 </footer>
 
   

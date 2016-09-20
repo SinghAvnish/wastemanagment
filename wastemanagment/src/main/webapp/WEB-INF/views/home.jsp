@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+   
     <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -48,12 +49,11 @@
   
 </head>
 <body>
+<sec:authorize access="hasRole('ROLE_USER')">
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-          <sec:authorize access="hasRole('ROLE_USER')">
-    
-      <a class="navbar-brand" href="/wastemanagment/">Ntique</a>
+     <a class="navbar-brand" href="/wastemanagment/">Ntique</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="/wastemanagment/">Home</a></li>
@@ -61,11 +61,12 @@
       <li><a href="suppliers">Supplier</a></li>
       <li><a href="subcategories">SubCategory</a></li>
       <li><a href="products">Product</a></li>
-      </sec:authorize>
-    </ul>
+     </ul>
+   </div>
     
-  </div>
 </nav>
+</sec:authorize>
+   
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
       <a class="navbar-brand" href="#">Ntiques</a>
@@ -102,8 +103,10 @@
         </sec:authorize>
         <sec:authorize access="isAnonymous()">
 		<li><a href="users"><span class="glyphicon glyphicon-user"></span>Signup</a></li>
+		
+		</sec:authorize>
 		<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
-		</sec:authorize> </ul>
+		 </ul>
       </div>
  </nav> 
      
@@ -136,8 +139,6 @@
        <div class="item">
         <img src="resources/images/table4.jpg" alt="Image">
         <div class="carousel-caption">
-          <h3></h3>
-          <p></p>
         </div>
       </div>
       
@@ -155,40 +156,82 @@
  </div>
  <div><h3 align="center">-------- Best Sellers --------</h3></div>
  <div class="row">
-  <div class="col-xs-6 col-md-3">
+ <div class="col-sm-4">
     <a href="#" class="thumbnail">
       <img src="resources/images/table4.jpg" alt="table4">
     </a>
   </div>
-  <div class="col-xs-6 col-md-3">
+  <div class="col-sm-4">
     <a href="#" class="thumbnail">
       <img src="resources/images/table5.jpg" alt="table5">
     </a>
   </div>
-  <div class="col-xs-6 col-md-3">
+  <div class="col-sm-4">
     <a href="#" class="thumbnail">
       <img src="resources/images/table6.jpg" alt="table6">
     </a>
   </div>
-  <div class="col-xs-6 col-md-3">
+   <div class="col-sm-4">
     <a href="#" class="thumbnail">
-      <img src="resources/images/table7.jpg" alt="table7">
+      <img src="resources/images/table6.jpg" alt="table6">
     </a>
   </div>
-  
-</div>
- 
- 
- <footer>
-  <div id="copyrights">
-        <h5><center>Copyright © 2012 Bombay Furniture Company. All Rights Reserved.&nbsp;&nbsp;Website by <a style="color:#000;" href="http://designconcentrate.in/" target="_blank">Design Concentrate</a></center></h5>
-    </div>
+   <div class="col-sm-4">
+    <a href="#" class="thumbnail">
+      <img src="resources/images/table6.jpg" alt="table6">
+    </a>
+  </div>
+   <div class="col-sm-4">
+    <a href="#" class="thumbnail">
+      <img src="resources/images/table6.jpg" alt="table6">
+    </a>
+  </div>
+  </div>
+  <div><h3>-----Testimonials----</h3></div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
     
-       
-          
-        
-        
-            
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+   
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="" alt="">
+        <div class="carousel-caption">
+         <p>This is to check </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="" alt="Image">
+        <div class="carousel-caption">
+          <p>This is to check </p>
+        </div>
+      </div>
+       <div class="item">
+        <img src="" alt="Image">
+        <div class="carousel-caption">
+        <p>This is to check </p>
+        </div>
+      </div>
+      
+    </div>
+
+  <!--   Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+ </div>
+  <footer>
+    <%@ include file="/WEB-INF/views/footer.jsp"%>           
 </footer>
 
   

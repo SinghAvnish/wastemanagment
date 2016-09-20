@@ -33,18 +33,19 @@
 <!-- <div class="jumbotron"> -->
 <div class="container" >
 	<h2>
-		<center>Add Product</center>
+		<center>Product List</center>
 		
 	</h2>
 
- <h3>Product List</h3>
+ 
  <br>
  
-<div class="container" style="background-color: lightgrey;">
+<div class="container" style="background-color:white;">
 	<c:if test="${!empty productList}">
 		<div class="table-responsive">
 
-			<table class="table table-hover">
+			<table class="table">
+			
 				<tr>
 				    <th width="80">Product ID</th>
 					<th width="80">Sub_Category ID</th>
@@ -77,7 +78,10 @@
 		</c:if>
 	</div>
 	</div>
- </
-
+ 
 </body>
+<footer>
+  <%@ include file="/WEB-INF/views/footer.jsp"%>
+  </footer>
+
 </html>  
