@@ -52,4 +52,9 @@
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="10240000" />
 	</bean>
+	<bean id="ShippingAddress"  class="com.ntiques.model.ShippingAddress"></bean>
+	<bean id="BillingAddress"  class="com.ntiques.model.BillingAddress"></bean>
+	<bean id="product"  class="com.ntiques.model.Product"></bean>
+	
+	
 </beans>

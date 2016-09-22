@@ -30,7 +30,6 @@ import com.ntiques.service.SupplierService;
 
 @Controller
 
-
 public class ProductController {
 	
 	Path path;

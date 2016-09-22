@@ -11,11 +11,9 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html>
-<%@include file="../shared/header.jsp"%>
 
 <body>
 	<div class="container-fluid">
-		<%@include file="../shared/menubar.jsp"%>
 		<div class="content">
 			<div class="panel panel-primary">
 				<div class="panel-heading">Billing Address</div>

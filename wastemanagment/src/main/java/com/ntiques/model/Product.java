@@ -1,5 +1,7 @@
 package com.ntiques.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,7 +14,9 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 @Entity
-public class Product {
+
+public class Product implements Serializable
+{
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

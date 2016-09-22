@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.ntiques.dao.ShippingAddressDao;
 import com.ntiques.model.ShippingAddress;
 
-@Repository("shippingAddressDAO")
+@Repository
 public class ShippingAddressDaoImpl implements ShippingAddressDao {
 
 	@Autowired
@@ -19,13 +19,13 @@ public class ShippingAddressDaoImpl implements ShippingAddressDao {
 		this.sessionFactory = sessionFactory;
 	}
 	
-@Transactional
+
 	public void saveOrUpdate(ShippingAddress shippingAddress) {
 		sessionFactory.getCurrentSession().saveOrUpdate(shippingAddress);
 
 	}
 
-@Transactional
+
 	public void deleteShippingAddress(int shippingAddressId) {
 	ShippingAddress shippingAddressToDelete = new ShippingAddress();
 	shippingAddressToDelete.setShippingAddressId(shippingAddressId);
@@ -33,7 +33,7 @@ public class ShippingAddressDaoImpl implements ShippingAddressDao {
 
 	}
 
-@Transactional
+
 	public ShippingAddress getShippingAddress(int shippingAddressId) {
 		
 		return sessionFactory.getCurrentSession().get(ShippingAddress.class, shippingAddressId);

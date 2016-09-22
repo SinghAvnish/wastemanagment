@@ -15,8 +15,9 @@ import com.ntiques.model.Product;
 
 	@Service
 	@Transactional
-	public class CartService {
-	@Autowired
+	public class CartService
+	{
+	@Autowired (required=true)
 	CartDaoImpl CartDao;
 		
 		

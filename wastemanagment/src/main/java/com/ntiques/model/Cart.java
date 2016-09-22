@@ -1,5 +1,6 @@
 package com.ntiques.model;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -12,8 +13,12 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+
+import org.springframework.stereotype.Component;
+
 @Entity
-public class Cart 
+@Component
+public class Cart implements Serializable
 {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,8 +28,8 @@ public class Cart
 	private int noOfProducts;
 	@ElementCollection
 	@OneToMany(mappedBy="cart", fetch = FetchType.EAGER)
-    private Set<CartItem> cartItem;			
-	
+   /* private Set<CartItem> cartItem;			
+	*/
 	@OneToOne(mappedBy="cart",cascade=CascadeType.ALL)
 	@JoinColumn(name="userId",insertable=false,updatable=false,nullable=false)
 	private User user;
@@ -50,12 +55,12 @@ public class Cart
 	{
 		this.cartId = cartId;
 	}
-	public Set<CartItem> getCartItem() {
+/*	public Set<CartItem> getCartItem() {
 		return cartItem;
 	}
 	public void setCartItem(Set<CartItem> cartItem) {
 		this.cartItem = cartItem;
-	}
+	}*/
 	public int getUserId() 
 	{
 		return userId;

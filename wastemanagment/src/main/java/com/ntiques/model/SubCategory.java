@@ -15,7 +15,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Entity
-public class SubCategory {
+public class SubCategory implements Serializable
+{
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

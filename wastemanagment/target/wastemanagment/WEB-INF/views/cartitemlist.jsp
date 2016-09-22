@@ -61,7 +61,8 @@
 						<td>{{group.prodname}}</td>
 						<td>{{group.price}}</td>
 						<td>{{group.quantity}}</td>
-			        </tr> 
+			        </tr>
+			        <td><a href="cart"><input type="button" value ="Checkout"> </a></td> 
 			</table>
 		</c:if>
 	</form:form>

@@ -1,5 +1,6 @@
 package com.ntiques.model;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.ElementCollection;
@@ -17,8 +18,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Entity
-
-public class Category {
+public class Category implements Serializable
+{
 	 @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
    

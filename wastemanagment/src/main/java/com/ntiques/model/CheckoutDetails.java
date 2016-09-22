@@ -1,8 +1,14 @@
 package com.ntiques.model;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
 
-public class CheckoutDetails implements Serializable {
+import org.springframework.stereotype.Component;
+
+
+@Component
+public class CheckoutDetails implements Serializable
+{
 	private CardDetail cardDetail;
 	private ShippingAddress shippingAddress;
 	private BillingAddress billingAddress;

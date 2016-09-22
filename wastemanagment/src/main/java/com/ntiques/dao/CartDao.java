@@ -1,4 +1,4 @@
-package com.ntiques.dao;
+	package com.ntiques.dao;
 
 import java.util.List;
 

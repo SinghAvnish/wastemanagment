@@ -11,9 +11,11 @@ import com.ntiques.model.CartItem;
 
 	@Service
 	@Transactional
-	public class CartItemService {
+	public class CartItemService 
+	{
 		@Autowired (required=true)
-	CartItemDaoImpl CartItemDao;
+		CartItemDaoImpl CartItemDao;
+		
 		public List<CartItem> listCartItems()
 		{
 			return CartItemDao.listCartItems();

@@ -22,7 +22,6 @@ import com.ntiques.service.UserService;
 
 
 @Controller
-
 public class UserController {
 	@Autowired    (required=true)
 	private UserService userservice;

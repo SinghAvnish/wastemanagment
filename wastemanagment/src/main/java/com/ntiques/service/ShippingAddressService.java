@@ -1,15 +1,19 @@
 package com.ntiques.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ntiques.dao.BillingAddressDaoImpl;
 import com.ntiques.dao.ShippingAddressDaoImpl;
 import com.ntiques.model.BillingAddress;
 import com.ntiques.model.ShippingAddress;
 
+@Service
+@Transactional
 public class ShippingAddressService {
 
-	@Autowired()
+	@Autowired(required=true)
 	ShippingAddressDaoImpl ShippingAddressDao;
 		
 		public void saveOrUpdate(ShippingAddress ShippingAddress)

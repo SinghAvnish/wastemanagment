@@ -15,19 +15,20 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.ntiques.dao.CartDao;
 import com.ntiques.model.Cart;
-import com.ntiques.model.OrderedItems;
 
-@Repository("CartDao")
-public class CartDaoImpl implements CartDao {
+@Repository
+public class CartDaoImpl implements CartDao 
+{
 
-	@Autowired
+@Autowired (required=true)	
 	SessionFactory sessionFactory;
 
-	public CartDaoImpl(SessionFactory sessionFactory) {
+	public CartDaoImpl(SessionFactory sessionFactory) 
+	{
 		this.sessionFactory = sessionFactory;
 	}
 
-	@Transactional
+	
 	public void saveOrUpdate(Cart cart) 
 	{
 		sessionFactory.getCurrentSession().saveOrUpdate(cart);

@@ -14,6 +14,7 @@ import com.ntiques.model.Category;
 @Transactional
 public class CategoryService {
 	@Autowired
+	
 CategoryDaoImpl categoryDAO;
 	public List<Category> list(){
 		return categoryDAO.list();

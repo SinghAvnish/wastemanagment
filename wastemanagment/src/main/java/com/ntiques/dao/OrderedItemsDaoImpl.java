@@ -15,7 +15,7 @@ import com.ntiques.dao.OrderedItemsDao;
 import com.ntiques.model.OrderDetail;
 import com.ntiques.model.OrderedItems;
 
-@Repository("OrderedItemsDao")
+@Repository
 public class OrderedItemsDaoImpl implements OrderedItemsDao {
 
 	@Autowired
@@ -25,13 +25,13 @@ public class OrderedItemsDaoImpl implements OrderedItemsDao {
 		this.sessionFactory = sessionFactory;
 	}
 
-	@Transactional
+	
 	public void saveOrUpdate(OrderedItems orderedItems) {
 		sessionFactory.getCurrentSession().saveOrUpdate(orderedItems);
 
 	}
 
-	@Transactional
+	
 	public void delete(int orderedItemId) {
 		OrderedItems orderedItemsTodelete = new OrderedItems();
 		orderedItemsTodelete.setOrderedItemId(orderedItemId);
@@ -39,14 +39,7 @@ public class OrderedItemsDaoImpl implements OrderedItemsDao {
 
 	}
 
-/*	@Transactional
-	public List<OrderedItems> listOrderedItems() {
-		String hql="from OrderedItems";
-		Query query = sessionFactory.getCurrentSession().createQuery(hql);
-		List<OrderedItems> listOfOrderedItems = query.getResultList();
-		return listOfOrderedItems;
-	}
-	*/
+
 	public List<OrderedItems> listOrderedItems()
 	{
 		

@@ -1,5 +1,7 @@
 package com.ntiques.model;
 
+import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,11 +13,13 @@ import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.stereotype.Component;
+
 @Entity
-public class CartItem 
+@Component
+public class CartItem implements Serializable
 
 {
-
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int cartitemid;

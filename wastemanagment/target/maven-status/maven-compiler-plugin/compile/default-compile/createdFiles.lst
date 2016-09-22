@@ -16,7 +16,6 @@ com\ntiques\dao\BillingAddressDao.class
 com\ntiques\model\CardDetail.class
 com\ntiques\service\OrderDetailService.class
 com\ntiques\dao\ShippingAddressDao.class
-com\ntiques\controller\CartController.class
 com\ntiques\model\CartItem.class
 com\ntiques\service\OrderedItemsService.class
 com\ntiques\dao\CartDao.class

@@ -4,24 +4,20 @@ import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
-import com.ntiques.model.BillingAddress;
 import com.ntiques.model.CartItem;
-import com.ntiques.model.Category;
-import com.ntiques.model.Product;
+
+
 
 @Repository
-public class CartItemDaoImpl implements CartItemDao {
+public class CartItemDaoImpl implements CartItemDao
+{
 	
-	
-	public CartItemDaoImpl() {
-
-	}
-	@Autowired (required=true)
+@Autowired (required=true)
 	private SessionFactory sessionFactory;
 
 
@@ -31,7 +27,7 @@ public class CartItemDaoImpl implements CartItemDao {
 	}
 	
 		
-		@Transactional
+		
 		public void saveOrUpdate(CartItem cartItem)
 		{
 			sessionFactory.getCurrentSession().saveOrUpdate(cartItem);
@@ -39,7 +35,7 @@ public class CartItemDaoImpl implements CartItemDao {
 
 		
 
-		@Transactional
+		
 		public void delete(int cartitemid) 
 		{
 			CartItem CartItemToDelete = new CartItem();
@@ -49,7 +45,7 @@ public class CartItemDaoImpl implements CartItemDao {
 		}
 
 	
-		@Transactional
+		
 		public CartItem getCartItem(int cartitemid) 
 		{
 			
@@ -67,7 +63,7 @@ public class CartItemDaoImpl implements CartItemDao {
 		}
 		
 		
-		@Transactional
+		
 		public List<CartItem> listCartItems()
 		{
 			
@@ -80,7 +76,7 @@ public class CartItemDaoImpl implements CartItemDao {
 			return listCartItem;
 		}
 		
-		@Transactional
+		
 		public List<CartItem> getCartItemsByUserId(int userId)
 		{
 			

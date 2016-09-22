@@ -10,7 +10,7 @@ package com.ntiques.dao;
 	import com.ntiques.dao.BillingAddressDao;
 	import com.ntiques.model.BillingAddress;
 
-	@Repository("BillingAddressDao")
+	@Repository
 	public class BillingAddressDaoImpl implements BillingAddressDao {
 
 		@Autowired (required=true)
@@ -21,13 +21,13 @@ package com.ntiques.dao;
 			this.sessionFactory = sessionFactory;
 		}
 
-		@Transactional
+		
 		public void saveOrUpdate(BillingAddress billingAddress) {
 			sessionFactory.getCurrentSession().saveOrUpdate(billingAddress);
 
 		}
 
-		@Transactional
+		
 		public void deleteBillingAddress(int billingAddressId) 
 		{
 			BillingAddress billingAddressToDelete = new BillingAddress();
@@ -36,7 +36,7 @@ package com.ntiques.dao;
 
 		}
 
-		@Transactional
+		
 		public BillingAddress getBillingAddress(int billingAddressId)
 		{
 			return sessionFactory.getCurrentSession().get(BillingAddress.class, billingAddressId);

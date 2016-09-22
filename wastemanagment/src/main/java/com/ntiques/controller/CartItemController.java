@@ -19,13 +19,16 @@ import com.ntiques.service.UserService;
 @Controller
 public class CartItemController {
 	
-	@Autowired    (required=true)
-	private CartItemService cartitemservice;
-	@Autowired    (required=true)
+	@Autowired (required=true)
+	private CartItemService cartItemService;
+	
+	@Autowired (required=true)
 	private UserService userService;
-	@Autowired    (required=true)
+	
+	@Autowired (required=true)
 	private CartService cartService;
-	@Autowired    (required=true)
+	
+	@Autowired (required=true)
 	private ProductService productService;
 	
 	
@@ -33,7 +36,7 @@ public class CartItemController {
 	@RequestMapping(value = "/cartitems",method = RequestMethod.GET)
 	public String listCategories(Model model) {
 		model.addAttribute("cartitem", new CartItem());
-		model.addAttribute("cartitemlist", this.cartitemservice.listCartItems());
+		model.addAttribute("cartitemlist", this.cartItemService.listCartItems());
 		return "cartitemlist";
 	}
 	
@@ -61,7 +64,7 @@ public class CartItemController {
 			cartItem.setPrice(productService.get(id).getPrice());
 			cartItem.setProdid(id);
 			cartItem.setQuantity(1);
-			cartitemservice.saveOrUpdate(cartItem);
+			cartItemService.saveOrUpdate(cartItem);
 			return "redirect:cartitemlist";
 			}
 		
@@ -69,7 +72,7 @@ public class CartItemController {
 	 		public String getList(Model model)
 	 		{
 	 		model.addAttribute("cartitem", new CartItem());
-	    	model.addAttribute("cartItemlist", this.cartitemservice.listCartItems());
+	    	model.addAttribute("cartItemlist", this.cartItemService.listCartItems());
 	    	return "cartitemlist";
 
 	    	

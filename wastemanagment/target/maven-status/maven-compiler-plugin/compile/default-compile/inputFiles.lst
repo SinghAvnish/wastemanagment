@@ -52,7 +52,6 @@ D:\myproject\wastemanagment\src\main\java\com\ntiques\dao\ShippingAddressDao.jav
 D:\myproject\wastemanagment\src\main\java\com\ntiques\dao\SubCategoryDao.java
 D:\myproject\wastemanagment\src\main\java\com\ntiques\model\CheckoutDetails.java
 D:\myproject\wastemanagment\src\main\java\com\ntiques\service\CartService.java
-D:\myproject\wastemanagment\src\main\java\com\ntiques\controller\CartController.java
 D:\myproject\wastemanagment\src\main\java\com\ntiques\controller\CartItemController.java
 D:\myproject\wastemanagment\src\main\java\com\ntiques\service\OrderDetailService.java
 D:\myproject\wastemanagment\src\main\java\com\ntiques\dao\SupplierDao.java

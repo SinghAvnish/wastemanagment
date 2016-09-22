@@ -15,7 +15,6 @@
 
 <body>
 	<div class="container-fluid">
-		<%@include file="../shared/menubar.jsp"%>
 
 		<div class="content">
 			<div class="container">
@@ -29,7 +28,6 @@
 
 			</div>
 		</div>
-		<%@include file="../shared/footer.jsp"%>
 	</div>
 </body>
 

@@ -1,5 +1,7 @@
 package com.ntiques.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,7 +14,8 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Table(name="Supplier")
 
 
-public class Supplier {
+public class Supplier implements Serializable
+{
 
 	
     @Id

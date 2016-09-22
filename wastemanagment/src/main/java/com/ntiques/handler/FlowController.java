@@ -41,9 +41,11 @@ import com.ntiques.service.UserService;
 
 
 @Component
-public class FlowController {
+public class FlowController
+{
 	@Autowired (required=true)
 	private ProductService ProductService;
+	
 	@Autowired (required=true)
 	private ShippingAddress ShippingAddress;
 
@@ -73,22 +75,24 @@ public class FlowController {
 
 	@Autowired (required=true)
 	private CardDetailService CardDetailService;
+	
 	@Autowired (required=true)
 	User user;
+	
 	@Autowired (required=true)
-	UserService userService;
+	UserService UserService;
 
 	@Autowired (required=true)
-	CartService cartService;
+	CartService CartService;
 
 	@Autowired (required=true)
 	Cart cart;
 
 	@Autowired (required=true)
-	CartItemService cartItemService;
+	CartItemService CartItemService;
 	
 	@Autowired (required=true)
-	HttpSession httpSession;
+	HttpSession HttpSession;
 	
 	@Autowired (required=true)
 	Product product;
@@ -96,15 +100,15 @@ public class FlowController {
 	CheckoutDetails checkoutDetails = new CheckoutDetails();
 
 	public CheckoutDetails initFlow() {
-		user = userService.getByUserName(SecurityContextHolder.getContext()
+		user = UserService.getByUserName(SecurityContextHolder.getContext()
 				.getAuthentication().getName());
-		checkoutDetails.setCart(cartService.getById(user.getUserId()));
-		checkoutDetails.setUser(userService.getByUserName(user.getUsername()));
+		checkoutDetails.setCart(CartService.getById(user.getUserId()));
+		checkoutDetails.setUser(UserService.getByUserName(user.getUsername()));
 		return checkoutDetails;
 	}
 
 	public String addShippingAddress(CheckoutDetails checkoutDetails, ShippingAddress shippingAddress) {
-		user = userService.getByUserName(SecurityContextHolder.getContext()
+		user = UserService.getByUserName(SecurityContextHolder.getContext()
 				.getAuthentication().getName());
 
 		shippingAddress.setUserId(user.getUserId());
@@ -122,7 +126,7 @@ public class FlowController {
 	}
 
 	public String addBillingAddress(CheckoutDetails checkoutDetails, BillingAddress billingAddress) {
-		user = userService.getByUserName(SecurityContextHolder.getContext().getAuthentication().getName());
+		user = UserService.getByUserName(SecurityContextHolder.getContext().getAuthentication().getName());
 		billingAddress.setUserId(user.getUserId());
 		checkoutDetails.setBillingAddress(billingAddress);
 
@@ -138,17 +142,17 @@ public class FlowController {
 	}
 
 	public String addCardDetails(CheckoutDetails checkoutDetails, CardDetail cardDetail) {
-		user = userService.getByUserName(SecurityContextHolder.getContext().getAuthentication().getName());
+		user = UserService.getByUserName(SecurityContextHolder.getContext().getAuthentication().getName());
 
 		cardDetail.setUserId(user.getUserId());
-		cardDetail.setTotalCost(cartService.getById(user.getUserId()).getGrandTotal());
+		cardDetail.setTotalCost(CartService.getById(user.getUserId()).getGrandTotal());
 		CardDetailService.saveOrUpdate(cardDetail);
 
-		List<CartItem> listOfCartItems = cartItemService.getCartItemsByUserId(user.getUserId());
+		List<CartItem> listOfCartItems = CartItemService.getCartItemsByUserId(user.getUserId());
 
-		listOfCartItems = cartItemService.getCartItemsByUserId(user.getUserId());
+		listOfCartItems = CartItemService.getCartItemsByUserId(user.getUserId());
 
-		cart = cartService.getById(user.getUserId());
+		cart = CartService.getById(user.getUserId());
 
 		cart.setCartId(cart.getCartId());
 		cart.setUserId(cart.getUserId());
@@ -156,9 +160,9 @@ public class FlowController {
 
 		ShippingAddressService.saveOrUpdate(checkoutDetails.getShippingAddress());
 		BillingAddressService.saveOrUpdate(checkoutDetails.getBillingAddress());
-		cartService.saveOrUpdate(cart);
+		CartService.saveOrUpdate(cart);
 
-		httpSession.setAttribute("noOfProducts", cart.getNoOfProducts());
+		HttpSession.setAttribute("noOfProducts", cart.getNoOfProducts());
 
 		return "success";
 	}

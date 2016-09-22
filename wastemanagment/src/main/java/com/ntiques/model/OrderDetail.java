@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 
 @Entity
 @Component
-
 public class OrderDetail implements Serializable{
 	
 	

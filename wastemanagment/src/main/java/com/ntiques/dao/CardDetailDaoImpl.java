@@ -9,17 +9,17 @@ package com.ntiques.dao;
 	import com.ntiques.dao.CardDetailDao;
 	import com.ntiques.model.CardDetail;
 
-	@Repository("CardDetailDao")
+	@Repository
 	public class CardDetailDaoImpl implements CardDetailDao {
 
-		@Autowired
+		@Autowired (required=true)
 		private SessionFactory sessionFactory;
 
 		public CardDetailDaoImpl(SessionFactory sessionFactory) {
 			this.sessionFactory = sessionFactory;
 		}
 		
-		@Transactional
+		
 		public void saveOrUpdate(CardDetail cardDetail) {
 		sessionFactory.getCurrentSession().saveOrUpdate(cardDetail);
 

@@ -15,7 +15,7 @@ import com.ntiques.dao.OrderDetailDao;
 import com.ntiques.model.CartItem;
 import com.ntiques.model.OrderDetail;
 
-@Repository("OrderDetailDao")
+@Repository
 public class OrderDetailDaoImpl implements OrderDetailDao {
 
 	@Autowired
@@ -26,26 +26,19 @@ public class OrderDetailDaoImpl implements OrderDetailDao {
 		this.sessionFactory = sessionFactory;
 	}
 
-	@Transactional
+	
 	public void saveOrUpdate(OrderDetail orderDetail) {
 		sessionFactory.getCurrentSession().saveOrUpdate(orderDetail);
 
 	}
 
-	@Transactional
+	
 	public void delete(int orderDetailId) {
 		OrderDetail orderDetailTodelete = new OrderDetail();
 		orderDetailTodelete.setOrderDetailId(orderDetailId);
 
 	}
 
-	/*@Transactional
-	public List<OrderDetail> listOrderDetails() {
-		String hql="from OrderDetail";
-		Query query = sessionFactory.getCurrentSession().createQuery(hql);
-		List<OrderDetail> listOfOrderDetails = query.getResultList();
-		return listOfOrderDetails;
-	}*/
 	
 	public List<OrderDetail> listOrderDetails()
 	{

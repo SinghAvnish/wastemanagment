@@ -4,7 +4,8 @@ import java.util.List;
 
 import com.ntiques.model.OrderDetail;
 
-public interface OrderDetailDao {
+public interface OrderDetailDao 
+{
 
 	void saveOrUpdate(OrderDetail orderDetail);
 

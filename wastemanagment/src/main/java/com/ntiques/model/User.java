@@ -48,7 +48,7 @@ public class User implements Serializable
 	private int cartid;
 	
 	@OneToOne
-	@JoinColumn(name="cartid",insertable=false,updatable=false,nullable=false)
+	@JoinColumn(name="cartId",insertable=false,updatable=false,nullable=false)
 	Cart cart;
 	
 	public Cart getCart() {

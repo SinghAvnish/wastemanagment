@@ -15,7 +15,6 @@
 
 <body>
 	<div class="container-fluid">
-		<%@include file="../shared/menubar.jsp"%>
 
 		<div class="content">
 			<div class="panel panel-primary">

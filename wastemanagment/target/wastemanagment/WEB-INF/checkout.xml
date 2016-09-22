@@ -3,19 +3,19 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/webflow  http://www.springframework.org/schema/webflow/spring-webflow-2.4.xsd">
 
-	<var name="shippingAddress" class="com.niit.shoppingcart.model.ShippingAddress" />
-	<var name="billingAddress" class="com.niit.shoppingcart.model.BillingAddress" />
-	<var name="orderedItems" class="com.niit.shoppingcart.model.OrderedItems" />
-	<var name="orderDetail" class="com.niit.shoppingcart.model.OrderDetail" />
-	<var name="cart" class="com.niit.shoppingcart.model.Cart" />
-	<var name="cartItem" class="com.niit.shoppingcart.model.CartItem" />
-	<var name="checkoutDetails" class="com.niit.shoppingcart.CheckoutDetails"></var>
+	<var name="shippingAddress" class="com.ntiques.model.ShippingAddress" />
+	<var name="billingAddress" class="com.ntiques.model.BillingAddress" />
+	<var name="orderedItems" class="com.ntiques.model.OrderedItems" />
+	<var name="orderDetail" class="com.ntiques.model.OrderDetail" />
+	<var name="cart" class="com.ntiques.model.Cart" />
+	<var name="cartItem" class="com.ntiques.model.CartItem" />
+	<var name="checkoutDetails" class="com.ntiques.model.CheckoutDetails"></var>
 
 	<on-start>
 		<evaluate expression="flowController.initFlow()" result="flowScope.checkoutDetails" />
 	</on-start>
 
-	<view-state id="checkout" view="cart/shippingAddress" model="shippingAddress">
+	<view-state id="checkout" view="shippingAddress" model="shippingAddress">
 		<transition on="submitShippingAddress" to="shippingDetails" />
 	</view-state>
 
@@ -25,7 +25,7 @@
 		<transition on="success" to="viewBillingDetails" />
 	</action-state>
 
-	<view-state id="viewBillingDetails" view="cart/billingAddress"
+	<view-state id="viewBillingDetails" view="billingAddress"
 		model="billingAddress">
 		<transition on="submitBillingAddress" to="billingDetails" />
 	</view-state>
@@ -36,7 +36,7 @@
 		<transition on="success" to="viewCardDetail" />
 	</action-state>
 
-	<view-state id="viewCardDetail" view="cart/cardDetail"
+	<view-state id="viewCardDetail" view="cardDetail"
 		model="cardDetail">
 		<transition on="confirmCheckout" to="paymentDetails" />
 	</view-state>
@@ -48,7 +48,7 @@
 	</action-state>
 
 
-	<view-state id="orderConfirm" view="cart/orderConfirmed">
+	<view-state id="orderConfirm" view="orderConfirmed">
 		<transition on="finalHome" to="toHome" />
 	</view-state>
 

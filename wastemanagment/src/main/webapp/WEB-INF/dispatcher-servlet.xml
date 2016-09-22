@@ -25,7 +25,7 @@
 		flow-builder-services="flowBuilderServices" base-path="/WEB-INF">
 		<!-- here the id is mapped to invoke this flow -->
 		<webflow:flow-location id="users" path="/memberShipFlow.xml" />
-		<!-- <webflow:flow-location id="cart" path="/cartflow.xml" /> --> 
+		 <webflow:flow-location id="cart" path="/checkout.xml" /> 
 	</webflow:flow-registry>
 	
 	<webflow:flow-builder-services id="flowBuilderServices"
