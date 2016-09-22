@@ -62,7 +62,7 @@ public class SupplierDaoImp implements SupplierDao {
 		return null;
 	}
 	
-public Supplier getByName(String name) {
+	public Supplier getByName(String name) {
 		
 		String hql = "from Supplier where name=" + "'"+ name +"'";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);

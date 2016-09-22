@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.ntiques.dao.CartDaoImpl;
 import com.ntiques.model.Cart;
+import com.ntiques.model.CartItem;
 import com.ntiques.model.Product;
 
 
@@ -24,6 +25,11 @@ import com.ntiques.model.Product;
 		public Cart getById(int userId){
 			return CartDao.getById(userId);
 		
+		}
+		
+		public void saveOrUpdate(Cart cart)
+		{
+			CartDao.saveOrUpdate(cart);
 		}
 		
 		  public int Cart(int userid)

@@ -33,7 +33,7 @@ public class CartItemController {
 	@RequestMapping(value = "/cartitems",method = RequestMethod.GET)
 	public String listCategories(Model model) {
 		model.addAttribute("cartitem", new CartItem());
-		model.addAttribute("cartitemlist", this.cartitemservice.list());
+		model.addAttribute("cartitemlist", this.cartitemservice.listCartItems());
 		return "cartitemlist";
 	}
 	
@@ -69,7 +69,7 @@ public class CartItemController {
 	 		public String getList(Model model)
 	 		{
 	 		model.addAttribute("cartitem", new CartItem());
-	    	model.addAttribute("cartItemlist", this.cartitemservice.list());
+	    	model.addAttribute("cartItemlist", this.cartitemservice.listCartItems());
 	    	return "cartitemlist";
 
 	    	

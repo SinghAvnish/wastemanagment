@@ -12,7 +12,9 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 @Entity
-public class CartItem {
+public class CartItem 
+
+{
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

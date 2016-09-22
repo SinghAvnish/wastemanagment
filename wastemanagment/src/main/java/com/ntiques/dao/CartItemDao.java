@@ -3,16 +3,18 @@ package com.ntiques.dao;
 import java.util.List;
 
 import com.ntiques.model.CartItem;
-import com.ntiques.model.Category;
-import com.ntiques.model.Product;
-
-import java.util.List;
-
 
 public interface CartItemDao
 {
-public void saveOrUpdate(CartItem cartitem);
+	
+	void saveOrUpdate(CartItem cartItem);
 
+	void delete(int cartitemid);
 
-public List<CartItem> list();
+	CartItem getCartItem(int cartitemid);
+
+	List<CartItem> getCartItemsByUserId(int userId);
+
+	List<CartItem> listCartItems();
+
 }

@@ -13,11 +13,14 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 @Entity
-public class Cart {
+public class Cart 
+{
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int cartId;
 	private int userId;
+	private double grandTotal;
+	private int noOfProducts;
 	@ElementCollection
 	@OneToMany(mappedBy="cart", fetch = FetchType.EAGER)
     private Set<CartItem> cartItem;			
@@ -29,6 +32,20 @@ public class Cart {
 	public int getCartId() {
 		return cartId;
 	}
+	public double getGrandTotal() {
+		return grandTotal;
+	}
+	public void setGrandTotal(double grandTotal) {
+		this.grandTotal = grandTotal;
+	}
+	public int getNoOfProducts() {
+		return noOfProducts;
+	}
+	
+	public void setNoOfProducts(int noOfProducts) {
+		this.noOfProducts = noOfProducts;
+	}
+	
 	public void setCartId(int cartId) 
 	{
 		this.cartId = cartId;

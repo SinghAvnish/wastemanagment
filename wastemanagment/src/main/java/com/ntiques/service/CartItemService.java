@@ -7,24 +7,49 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.ntiques.dao.CartItemDaoImpl;
-import com.ntiques.dao.CategoryDaoImpl;
 import com.ntiques.model.CartItem;
-import com.ntiques.model.Category;
-import com.ntiques.model.Product;
 
 	@Service
 	@Transactional
 	public class CartItemService {
-		@Autowired
+		@Autowired (required=true)
 	CartItemDaoImpl CartItemDao;
-		public List<CartItem> list()
+		public List<CartItem> listCartItems()
 		{
-			return CartItemDao.list();
+			return CartItemDao.listCartItems();
 		}
+		
+		public List<CartItem> getCartItemsByUserId(int userId)
+		{
+			return CartItemDao.getCartItemsByUserId(userId);
+		}
+		
+		
 		public void saveOrUpdate(CartItem cartitem)
 		{
 			CartItemDao.saveOrUpdate(cartitem);
 		}
 		
+		public CartItem getCartItem(int cartitemid)
+		{
+			return CartItemDao.getCartItem(cartitemid);
+		
+		}
+		
+		public void delete(int cartitemid)
+		{
+			
+			CartItemDao.delete(cartitemid);
+			
+			
+		}
+		
+		
+
+		
+		
+
+		
+
 		
 	}

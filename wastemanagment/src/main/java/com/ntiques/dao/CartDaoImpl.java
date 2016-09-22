@@ -2,6 +2,8 @@ package com.ntiques.dao;
 
 import java.util.List;
 
+
+
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -9,28 +11,32 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.ntiques.dao.CartDao;
 import com.ntiques.model.Cart;
-import com.ntiques.model.CartItem;
-import com.ntiques.model.User;
+import com.ntiques.model.OrderedItems;
 
-@Repository
-public class CartDaoImpl implements CartDao 
-{
-	
-	public CartDaoImpl() {
+@Repository("CartDao")
+public class CartDaoImpl implements CartDao {
 
-	}
 	@Autowired
-	private SessionFactory sessionFactory;
+	SessionFactory sessionFactory;
 
-
-	public CartDaoImpl(SessionFactory sessionFactory)
-	{
+	public CartDaoImpl(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
-		
+
+	@Transactional
+	public void saveOrUpdate(Cart cart) 
+	{
+		sessionFactory.getCurrentSession().saveOrUpdate(cart);
+	}
+
 	
+
+	
+
 	public Cart getById(int userId) 
 	{
 		Session session=sessionFactory.openSession();
@@ -43,6 +49,5 @@ public class CartDaoImpl implements CartDao
 			
 		}
 		
-		
-		
-}
+		}	
+
