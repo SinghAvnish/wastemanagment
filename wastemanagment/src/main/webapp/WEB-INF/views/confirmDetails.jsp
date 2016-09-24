@@ -15,8 +15,8 @@
 <title>Confirm Details</title>
 </head>
 <body>
-<div class="content" align="justify" style="background-color: light-grey;">
-<fieldset>
+<div class="content" align="center" style="background-color: light-grey;">
+<fieldset align="justify">
 				<legend>Confirm Details</legend>
 				<a href="${flowExecutionUrl}&_eventId_home">Home</a><br /><br />
 				<sf:form commandName="user">
@@ -26,23 +26,19 @@
 					<br /><br />
 					<sf:label path="role">Role:</sf:label>${user.role}
 					<br /><br />
-					
-															
 					<sf:label path="password">Password:</sf:label>${user.password}
 										<br /><br />
 										
 					<sf:label path="email">Email:</sf:label>${user.email}
 										<br /><br />
+					<sf:label path="gender">Gender:</sf:label>${user.gender}
+					<br /><br />					
 					
 					<sf:label path="buildingName">Building Name:</sf:label>${user.buildingName}
 										<br /><br />
 					
 					<sf:label path="street">Street:</sf:label>${user.street}
 										<br /><br />
-					
-					<sf:label path="gender">Gender:</sf:label>${user.gender}
-					<br /><br />
-					
 					<sf:label path="flatNo">Flat NO:</sf:label>${user.flatNo}
 					<br /><br />
 					
@@ -61,8 +57,6 @@
 					</fieldset>
 					</div>
 				
-<footer>
- <%@ include file="/WEB-INF/views/footer.jsp"%>
-</footer>	
+	
 </body>
 </html>

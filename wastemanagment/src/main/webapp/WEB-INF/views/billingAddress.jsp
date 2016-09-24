@@ -11,7 +11,10 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html>
+<head>   
+ <%@ include file="/WEB-INF/views/header.jsp"%>           
 
+</head>
 <body>
 	<div class="container-fluid">
 		<div class="content">
@@ -70,7 +73,6 @@
 				</div>
 			</div>
 		</div>
-		<%@ include file="/WEB-INF/views/footer.jsp"%>
 	</div>
 </body>
 </html>

@@ -18,10 +18,12 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  
   <style>
-  .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img
+   {
     width: 100%;
     height:50%;
-}
+	}
+
 .navbar {
       margin-bottom: 0;
       border-radius: 0;
@@ -45,6 +47,60 @@
       display: none;
     }
   }
+  </style>
+  <style>
+  .carousel-control.right, .carousel-control.left 
+  {
+    background-image: none;
+    color: #f4511e;
+}
+
+.carousel-indicators li {
+    border-color: #f4511e;
+}
+
+.carousel-indicators li.active {
+    background-color: #f4511e;
+}
+
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+
+.item span {
+    font-style: normal;
+}
+ </style>
+  <style>
+  .carousel-control.right, .carousel-control.left 
+  {
+    background-image: none;
+    color: #f4511e;
+}
+
+.carousel-indicators li {
+    border-color: #f4511e;
+}
+
+.carousel-indicators li.active {
+    background-color: #f4511e;
+}
+
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+
+.item span {
+    font-style: normal;
+}
  </style>
   
 </head>
@@ -61,6 +117,11 @@
       <li><a href="suppliers">Supplier</a></li>
       <li><a href="subcategories">SubCategory</a></li>
       <li><a href="products">Product</a></li>
+      <li><a href="productlist">ProductList</a></li>
+     <li><a href="subcategorylist">SubCategoryList</a></li>
+     <li><a href="supplierlist">SupplierList</a></li>
+      <li><a href="cartitemlist">CartItemList</a></li>
+     
      </ul>
    </div>
     
@@ -162,10 +223,13 @@
     </a>
   </div>
   <div class="col-sm-4">
-    <a href="#" class="thumbnail">
+   <div class="thumbnail" align="justify">
       <img src="resources/images/table5.jpg" alt="table5">
-    </a>
-  </div>
+        <p><strong>Table</strong></p>
+        <p>Yes, San Fran is ours</p>
+      </div>
+   </div>
+   
   <div class="col-sm-4">
     <a href="#" class="thumbnail">
       <img src="resources/images/table6.jpg" alt="table6">
@@ -187,7 +251,8 @@
     </a>
   </div>
   </div>
-  <div><h3>-----Testimonials----</h3></div>
+  <div><h3><center>-----What Our Customers Say ---</center></h3></div>
+  <div>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     
     <ol class="carousel-indicators">
@@ -199,26 +264,20 @@
    
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="" alt="">
-        <div class="carousel-caption">
-         <p>This is to check </p>
+      <h4><center>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></center></h4>
         </div>
-      </div>
 
       <div class="item">
-        <img src="" alt="Image">
-        <div class="carousel-caption">
-          <p>This is to check </p>
-        </div>
-      </div>
+       <h4><center>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></center></h4>
+       
+       </div>
+       
        <div class="item">
-        <img src="" alt="Image">
-        <div class="carousel-caption">
-        <p>This is to check </p>
-        </div>
+       <h4><center>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></center></h4>
       </div>
       
-    </div>
+      
+   </div>
 
   <!--   Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -229,6 +288,8 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+ </div>
+ </div>
  </div>
   <footer>
     <%@ include file="/WEB-INF/views/footer.jsp"%>           

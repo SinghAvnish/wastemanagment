@@ -14,7 +14,9 @@ public interface CartItemDao
 	CartItem getCartItem(int cartitemid);
 
 	List<CartItem> getCartItemsByUserId(int userId);
-
+	
+	List<CartItem> getCartItemsByUser(int cartid);
+	
 	List<CartItem> listCartItems();
 
 }

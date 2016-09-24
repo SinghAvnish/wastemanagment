@@ -34,7 +34,7 @@ public class CartItemController {
 	
 	
 	@RequestMapping(value = "/cartitems",method = RequestMethod.GET)
-	public String listCategories(Model model) {
+	public String listCartItems(Model model) {
 		model.addAttribute("cartitem", new CartItem());
 		model.addAttribute("cartitemlist", this.cartItemService.listCartItems());
 		return "cartitemlist";
@@ -68,18 +68,23 @@ public class CartItemController {
 			return "redirect:cartitemlist";
 			}
 		
-	 		@RequestMapping("/cartitemlist")
-	 		public String getList(Model model)
-	 		{
-	 		model.addAttribute("cartitem", new CartItem());
-	    	model.addAttribute("cartItemlist", this.cartItemService.listCartItems());
-	    	return "cartitemlist";
+	 	
 
-	    	
-	 		}
+			@RequestMapping("/cartitemlist")
+			public String cartList(Model model)
+			{
+				Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+				String username = authentication.getName();
+		
+				int userId=userService.getByName(username).getUserId();
+				int cartId=cartService.getById(userId).getCartId();
+				model.addAttribute("cartItemList", this.cartItemService.getCartItemsByUser(cartId));
+				return "cartitemlist";
+	}	
+	 	}
 		
 
-}
+
 
 
 

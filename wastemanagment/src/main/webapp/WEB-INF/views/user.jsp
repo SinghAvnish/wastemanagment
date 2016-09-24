@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 
     pageEncoding="ISO-8859-1"%>
     <%@ include file="/WEB-INF/views/header.jsp"%>
@@ -46,22 +46,22 @@
 				<tr><td>Password:</td>
 				<td><form:input path="password" /></td>
 				</tr>
+				<tr><td>Gender:</td>
+				<td><form:input path="gender" /></td>
+				</tr>   
 				 <tr><td>Email:</td>
 				<td><form:input path="email" /></td>
 				</tr>
-               <tr><td>Building Name</td>
+                <tr><td>Building Name</td>
 				<td><form:input path="buildingName" /></td>
 				</tr>
-            	<tr><td>Street:</td>
-				<td><form:input path="street" /></td>
-				</tr>    
-                <tr><td>Gender:</td>
-				<td><form:input path="gender" /></td>
-				</tr>   
-				<tr>
+            	 <tr>
                   <tr><td>Flat No</td>
 				<td><form:input path="flatNo" /></td>
-				</tr>             
+				</tr>   
+				<tr><td>Street:</td>
+				<td><form:input path="street" /></td>
+				</tr>          
                  <tr>
                   <tr><td>City Name:</td>
 				<td><form:input path="city" /></td>
@@ -80,8 +80,5 @@
 </form:form>
 </center>
 </body>
-<footer>
- <%@ include file="/WEB-INF/views/footer.jsp"%>
-</footer>
 
 </html>

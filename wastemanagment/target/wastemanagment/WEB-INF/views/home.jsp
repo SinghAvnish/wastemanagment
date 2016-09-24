@@ -45,6 +45,31 @@
       display: none;
     }
   }
+  
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+}
+
+.carousel-indicators li {
+    border-color: #f4511e;
+}
+
+.carousel-indicators li.active {
+    background-color: #f4511e;
+}
+
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+
+.item span {
+    font-style: normal;
+}
  </style>
   
 </head>
@@ -187,7 +212,7 @@
     </a>
   </div>
   </div>
-  <div><h3>-----Testimonials----</h3></div>
+  <div><h3><center>-----What our customers say about us----</center></h3></div>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     
     <ol class="carousel-indicators">
@@ -199,23 +224,16 @@
    
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="" alt="">
-        <div class="carousel-caption">
-         <p>This is to check </p>
+         <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
         </div>
       </div>
 
       <div class="item">
-        <img src="" alt="Image">
-        <div class="carousel-caption">
-          <p>This is to check </p>
-        </div>
-      </div>
+        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+       </div>
+       
        <div class="item">
-        <img src="" alt="Image">
-        <div class="carousel-caption">
-        <p>This is to check </p>
-        </div>
+       <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
       </div>
       
     </div>

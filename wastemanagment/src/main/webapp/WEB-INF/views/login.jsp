@@ -32,7 +32,7 @@ position: absolute;
 
 <div class="container"  style="margin-top:30px" >
     <div class="row-md-4 row-md-vertical-offset-40">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-4 col-md-offset-4" align="center">
     		       <!-- <div class="panel panel-info"> -->
 			  	 <div class="panel-heading"> 
 			    	<h4 class="panel-title"><strong>Sign in</strong></h4>
@@ -46,7 +46,8 @@ position: absolute;
 			    		<div class="form-group">
 			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
 			    		</div>
-			    			<input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
+			    			<input class="btn btn-lg btn-success btn-block" type="submit" value="Login"><br>
+			    			<a href="users"> Create Account Here</a>
 			    	</fieldset>
 			      	</form>
 			    </div>

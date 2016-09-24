@@ -27,6 +27,11 @@ import com.ntiques.model.CartItem;
 		}
 		
 		
+		public List<CartItem> getCartItemsByUser(int cartid)
+		{
+			return CartItemDao.getCartItemsByUser(cartid);
+		}
+		
 		public void saveOrUpdate(CartItem cartitem)
 		{
 			CartItemDao.saveOrUpdate(cartitem);

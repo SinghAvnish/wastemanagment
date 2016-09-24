@@ -6,10 +6,13 @@ import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.ntiques.model.Cart;
 import com.ntiques.model.CartItem;
+import com.ntiques.model.Category;
 
 
 
@@ -90,10 +93,18 @@ public class CartItemDaoImpl implements CartItemDao
 		}
 
 
+	public List<CartItem> getCartItemsByUser(int cartid)
+	{
+		Session session=sessionFactory.openSession();
+		Criteria c = session.createCriteria(CartItem.class);
+		c.add(Restrictions.eq("cartid", cartid));
+		@SuppressWarnings("unchecked")
+		List<CartItem> cart = c.list();
+		session.flush();
 		
-
-
-
+		return getCartItemsByUser(cartid);	
+			
+	}
 
 		
 		
