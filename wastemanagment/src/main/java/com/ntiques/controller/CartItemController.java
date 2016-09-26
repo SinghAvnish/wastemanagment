@@ -32,13 +32,13 @@ public class CartItemController {
 	private ProductService productService;
 	
 	
-	
+	/*
 	@RequestMapping(value = "/cartitems",method = RequestMethod.GET)
 	public String listCartItems(Model model) {
 		model.addAttribute("cartitem", new CartItem());
 		model.addAttribute("cartitemlist", this.cartItemService.listCartItems());
 		return "cartitemlist";
-	}
+	}*/
 	
 	@RequestMapping(value= "/CartItemadd")
 		

@@ -56,11 +56,11 @@
 <!-- 
 	<end-state id="orderConfirm" view="cart/orderConfirmed"/> -->	
 	<end-state id="toCartView" view="externalRedirect:contextRelative:/user/cart/" />
-	<end-state id="toHome" view="externalRedirect:contextRelative:/index" />
+	<end-state id="toHome" view="externalRedirect:contextRelative:/" />
 
 	<global-transitions>
 		<transition on="cancel" to="toCartView" />
-		<!-- <transition on="finalHome" to="toHome" /> -->
+		<transition on="finalHome" to="toHome" /> 
 	</global-transitions>
 
 </flow>	

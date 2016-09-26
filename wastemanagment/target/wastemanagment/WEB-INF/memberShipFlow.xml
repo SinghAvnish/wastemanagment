@@ -26,14 +26,12 @@
 		<transition on="submit" to="welcome" />
 	</view-state>
 	
-	 <!-- <view-state id="home" view="home" model="flowScope.user">
-		<transition on="Home" to="home" />
-		</view-state> 
-  -->
+	  
+  
 	<end-state id="welcome" view="home" />
+   <end-state id="toHome" view="home" />
 	
-	<!-- <end-state id="toException" view="externalRedirect:contextRelative:exception.jsp" />
-  -->
+  
 	<global-transitions>
 		<transition on="Home" to="toHome"/>
 	</global-transitions>

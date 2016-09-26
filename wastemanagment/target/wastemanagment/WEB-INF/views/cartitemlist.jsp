@@ -20,7 +20,7 @@
 		myApp.controller('getData', function($scope,$http,$location)
 		 { 
 			//$scope.searchKeyword=location.search.substr(15);
-			$scope.cartItemdata= ${cartItemlist};
+			$scope.cartItemdata= ${cartItemList};
 			//alert($scope.productdata);
 		 
 		 });
@@ -41,7 +41,7 @@
 	
 	<form:form class="form-horizontal" role="form" action="${addAction}"  commandName="cartitem">
 			
-	<c:if test="${!empty cartItemlist}">
+	<c:if test="${!empty cartItemList}">
 		<div class="table-responsive">
 
 			<table class="table">

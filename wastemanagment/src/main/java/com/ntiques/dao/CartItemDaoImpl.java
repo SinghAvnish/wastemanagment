@@ -102,7 +102,7 @@ public class CartItemDaoImpl implements CartItemDao
 		List<CartItem> cart = c.list();
 		session.flush();
 		
-		return getCartItemsByUser(cartid);	
+		return cart;	
 			
 	}
 
