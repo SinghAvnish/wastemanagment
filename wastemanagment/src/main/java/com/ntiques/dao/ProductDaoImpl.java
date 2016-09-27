@@ -74,6 +74,15 @@ public class ProductDaoImpl implements ProductDao {
 		return null;
 	}
 	
+     
+     public Product productdisplay(int id) {
+ 		
+ 		String hql = "from Product where id=" + "'"+ id +"'";
+ 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+ 		
+ 		return null;
+ 	}
+ 	
 	
 	public Product getByName(String name) {
 		

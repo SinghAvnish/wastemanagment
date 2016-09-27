@@ -17,7 +17,8 @@ import com.ntiques.service.ProductService;
 import com.ntiques.service.UserService;
 
 @Controller
-public class CartItemController {
+public class CartItemController
+{
 	
 	@Autowired (required=true)
 	private CartItemService cartItemService;
@@ -32,13 +33,6 @@ public class CartItemController {
 	private ProductService productService;
 	
 	
-	/*
-	@RequestMapping(value = "/cartitems",method = RequestMethod.GET)
-	public String listCartItems(Model model) {
-		model.addAttribute("cartitem", new CartItem());
-		model.addAttribute("cartitemlist", this.cartItemService.listCartItems());
-		return "cartitemlist";
-	}*/
 	
 	@RequestMapping(value= "/CartItemadd")
 		

@@ -44,5 +44,8 @@ public class ProductService {
 			return ProductDao.getByName(name);
 		}
 
+		public Product productdisplay(int id){
+			return ProductDao.productdisplay(id);
+		}
 
 }

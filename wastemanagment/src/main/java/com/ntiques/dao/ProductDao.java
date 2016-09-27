@@ -17,6 +17,9 @@ import com.ntiques.model.Product;
 
 
 	public Product getByName(String name);
+	
+	public Product productdisplay(int id);
+
 
 
 

@@ -21,65 +21,77 @@
 		<legend>Confirm Details</legend>
 				<a href="${flowExecutionUrl}&_eventId_Home&_eventId_Home">Home</a><br /><br />
 				<sf:form commandName="user">
-				<td>
+				
 				<tr>
 					<sf:label path="username">User Name:</sf:label>${user.username}
-				<tr>
-				</td>
-				<td>
+				</tr>
+				<br>
+				
 				<tr>
 					<sf:label path="enabled">Enabled:</sf:label>${user.enabled}
-					<tr>
-				</td>
-				<td>
+				</tr>
+				</td><br>
+				
+				
 				<tr>
 					<sf:label path="role">Role:</sf:label>${user.role}
-				<tr>
-				</td>
-				<td>
+				</tr>
+				<br>
+				
+				
 				<tr>
 				<sf:label path="password">Password:</sf:label>${user.password}
-				<tr>
-				</td>	
-				<td>
+				</tr>
+				<br>
+					
+				
 				<tr>
 					<sf:label path="email">Email:</sf:label>${user.email}
-				<tr>
-				</td>
-				<td>
+				</tr>
+				<br>
+				
+				
 				<tr>
 					<sf:label path="gender">Gender:</sf:label>${user.gender}
-					<br /><br />					
+				</tr>
+				<br>
 					
-					<sf:label path="buildingName">Building Name:</sf:label>${user.buildingName}
+				
 				<tr>
-				</td>	
-				<td>
+					<sf:label path="buildingName">Building Name:</sf:label>${user.buildingName}
+				</tr>
+				<br>	
+				
+				
 				<tr>
 					<sf:label path="street">Street:</sf:label>${user.street}
 
-				<tr>
-				</td>	
-				<td>
+				</tr>
+				<br>
+					
+				
 				<tr>
 				<sf:label path="flatNo">Flat NO:</sf:label>${user.flatNo}
-				<tr>
-				</td>
-				<td>
+				</tr>
+				<br>
+				
+				
 				<tr>
 				<sf:label path="city">City:</sf:label>${user.city}
-				<tr>
-				</td>		
-				<td>
+				</tr>
+				<br>
+						
+				
 				<tr>
 				<sf:label path="state">State:</sf:label>${user.state}
-				<tr>
-				</td>	
-				<td>
+				</tr>
+				<br>
+					
+				
 				<tr>
 				<sf:label path="country">Country:</sf:label>${user.country}
-				<tr>
-				</td>					
+				</tr>
+				<br>					
 					<input name="_eventId_edit" type="submit" value="Edit" /> 
 					<input name="_eventId_submit" type="submit" value="Confirm Details" /><br />
 					</sf:form>

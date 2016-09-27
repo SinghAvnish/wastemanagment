@@ -12,8 +12,15 @@
  
 	 <!-- if not specified the first view state is the starting state -->
 	<view-state id="start" view="user" model="flowScope.user">
-	   <transition on="submit" to="add"/>
+	   <transition on="submit" to="validate"/>
 	</view-state>
+	
+	<action-state id="validate">
+		<evaluate expression="demo.validateDetails(user,messageContext)"></evaluate>
+		<transition on="success" to="add" />
+		<transition on="failure" to="start" />
+	</action-state>
+	
  
 	<action-state id="add">
 		<evaluate expression="userService.saveOrUpdate(user)"></evaluate>
@@ -24,12 +31,13 @@
 	<view-state id="confirmDetails" view="confirmDetails" model="flowScope.user">
 		<transition on="edit" to="start" />
 		<transition on="submit" to="welcome" />
+		<transition on="Home" to="toHome" />
+		
 	</view-state>
 	
 	  
-  
-	<end-state id="welcome" view="home" />
-   <end-state id="toHome" view="home" />
+  <end-state id="welcome" view="externalRedirect:contextRelative:/" />
+   <end-state id="toHome" view="externalRedirect:contextRelative:/" />
 	
   
 	<global-transitions>

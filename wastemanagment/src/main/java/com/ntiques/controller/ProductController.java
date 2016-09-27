@@ -42,7 +42,8 @@ public class ProductController {
 	
 	@RequestMapping(value = "products", method = RequestMethod.GET)
 	
-	public String listProducts(Model model) {
+	public String listProducts(Model model) 
+	{
 		model.addAttribute("product", new Product());
 		model.addAttribute("subcategory", new SubCategory());
 		model.addAttribute("supplier", new Supplier());
@@ -136,7 +137,14 @@ public class ProductController {
 
     	
     }
-
+	 
+	 @RequestMapping("/productdisplay")
+	    public String getdisplay(Model model)
+	 {
+	    	model.addAttribute("productdisplay", this.productservice.productdisplay(0));
+	    	return "productdisplay";
+	    	
+	 }
 
 
 }

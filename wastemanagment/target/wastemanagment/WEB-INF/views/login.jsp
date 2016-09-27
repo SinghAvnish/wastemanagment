@@ -10,22 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>
-  <style>
-
-body {
-position: absolute;
-	top: 70px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	width: auto;
-	height: auto;
-	background-image:  url("#");
-	background-size: cover;
-     
-     
-}
-</style>
+ 
 </head>
 <body>
 
@@ -47,7 +32,7 @@ position: absolute;
 			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
 			    		</div>
 			    			<input class="btn btn-lg btn-success btn-block" type="submit" value="Login"><br>
-			    			<a href="users"> Create Account Here</a>
+			    			<a href="users"> Create Your Account Here</a>
 			    	</fieldset>
 			      	</form>
 			    </div>

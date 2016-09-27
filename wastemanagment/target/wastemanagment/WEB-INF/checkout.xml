@@ -56,7 +56,7 @@
 <!-- 
 	<end-state id="orderConfirm" view="cart/orderConfirmed"/> -->	
 	<end-state id="toCartView" view="externalRedirect:contextRelative:/user/cart/" />
-	<end-state id="toHome" view="externalRedirect:contextRelative:/home" />
+	<end-state id="toHome" view="externalRedirect:contextRelative:/" />
 
 	<global-transitions>
 		<transition on="cancel" to="toCartView" />

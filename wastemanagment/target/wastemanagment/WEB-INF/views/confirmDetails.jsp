@@ -15,46 +15,87 @@
 <title>Confirm Details</title>
 </head>
 <body>
-<div class="content" align="center" style="background-color: light-grey;">
-<fieldset align="justify">
-				<legend>Confirm Details</legend>
-				<a href="${flowExecutionUrl}&_eventId_home">Home</a><br /><br />
+<div align="center" style="background-color: transparent;">
+
+<table border="0">		
+		<legend>Confirm Details</legend>
+				<a href="${flowExecutionUrl}&_eventId_Home&_eventId_Home">Home</a><br /><br />
 				<sf:form commandName="user">
+				
+				<tr>
 					<sf:label path="username">User Name:</sf:label>${user.username}
-					<br /><br />
+				</tr>
+				<br>
+				
+				<tr>
 					<sf:label path="enabled">Enabled:</sf:label>${user.enabled}
-					<br /><br />
+				</tr>
+				</td><br>
+				
+				
+				<tr>
 					<sf:label path="role">Role:</sf:label>${user.role}
-					<br /><br />
-					<sf:label path="password">Password:</sf:label>${user.password}
-										<br /><br />
-										
+				</tr>
+				<br>
+				
+				
+				<tr>
+				<sf:label path="password">Password:</sf:label>${user.password}
+				</tr>
+				<br>
+					
+				
+				<tr>
 					<sf:label path="email">Email:</sf:label>${user.email}
-										<br /><br />
+				</tr>
+				<br>
+				
+				
+				<tr>
 					<sf:label path="gender">Gender:</sf:label>${user.gender}
-					<br /><br />					
+				</tr>
+				<br>
 					
+				
+				<tr>
 					<sf:label path="buildingName">Building Name:</sf:label>${user.buildingName}
-										<br /><br />
-					
+				</tr>
+				<br>	
+				
+				
+				<tr>
 					<sf:label path="street">Street:</sf:label>${user.street}
-										<br /><br />
-					<sf:label path="flatNo">Flat NO:</sf:label>${user.flatNo}
-					<br /><br />
+
+				</tr>
+				<br>
 					
-					<sf:label path="city">City:</sf:label>${user.city}
-					<br /><br />
+				
+				<tr>
+				<sf:label path="flatNo">Flat NO:</sf:label>${user.flatNo}
+				</tr>
+				<br>
+				
+				
+				<tr>
+				<sf:label path="city">City:</sf:label>${user.city}
+				</tr>
+				<br>
+						
+				
+				<tr>
+				<sf:label path="state">State:</sf:label>${user.state}
+				</tr>
+				<br>
 					
-					<sf:label path="state">State:</sf:label>${user.state}
-					<br /><br />
-					
-					<sf:label path="country">Country:</sf:label>${user.country}
-					<br /><br />
-					
+				
+				<tr>
+				<sf:label path="country">Country:</sf:label>${user.country}
+				</tr>
+				<br>					
 					<input name="_eventId_edit" type="submit" value="Edit" /> 
 					<input name="_eventId_submit" type="submit" value="Confirm Details" /><br />
 					</sf:form>
-					</fieldset>
+					</table>
 					</div>
 				
 	

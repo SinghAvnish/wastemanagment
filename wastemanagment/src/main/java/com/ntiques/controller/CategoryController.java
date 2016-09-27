@@ -22,7 +22,8 @@ import com.ntiques.service.CategoryService;
 @SessionAttributes({ "Category" })
 @Controller
 
-public class CategoryController {
+public class CategoryController 
+{
 	@Autowired    (required=true)
 	private CategoryService categoryService;
 	
@@ -35,7 +36,7 @@ public class CategoryController {
 		return "category";
 	}
 	
-	@RequestMapping(value= "/category/add")
+	@RequestMapping(value= "category/add")
 	public String addCategory(@ModelAttribute("category") Category category){
 		
 	
