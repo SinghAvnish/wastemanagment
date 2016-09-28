@@ -21,7 +21,7 @@
   .carousel-inner > .item > img, .carousel-inner > .item > a > img
    {
     width: 100%;
-    height:50%;
+    height:30%;
 	}
 
 .navbar {
@@ -108,11 +108,9 @@
 <sec:authorize access="hasRole('ROLE_ADMIN')">
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <div class="navbar-header">
-     <a class="navbar-brand" href="/wastemanagment/">Ntique</a>
-    </div>
+   
     <ul class="nav navbar-nav">
-      <li class="active"><a href="/wastemanagment/">Home</a></li>
+      
        <li><a href="categories">Category</a></li>
       <li><a href="suppliers">Supplier</a></li>
       <li><a href="subcategories">SubCategory</a></li>
@@ -130,7 +128,7 @@
    
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-      <a class="navbar-brand" href="#">Ntiques</a>
+      <a class="navbar-brand" href="/wastemanagment/">Ntiques</a>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -155,9 +153,9 @@
        <li><a href="login" style="margin:50;"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
       </sec:authorize>
       <c:if test="${pageContext.request.userPrincipal.name!= null}">
-		<h2>
+		<h4>
 			Welcome ${pageContext.request.userPrincipal.name}
-		</h2>
+		</h4>
        </c:if>
         <sec:authorize access="isAuthenticated()">
         <li><a href="<c:url value="/logout" />">Logout</a></li>
@@ -166,7 +164,7 @@
 		<li><a href="users"><span class="glyphicon glyphicon-user"></span>Signup</a></li>
 		
 		</sec:authorize>
-		<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
+		<!-- <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li> -->
 		 </ul>
       </div>
  </nav> 
@@ -178,26 +176,33 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
    
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="resources/images/c.jpg" alt="Image">
+        <img src="resources/images/cm.jpg" alt="Image">
         <div class="carousel-caption">
          
         </div>
       </div>
 
       <div class="item">
-        <img src="resources/images/bed1.jpg" alt="Image">
+        <img src="resources/images/ck.jpg" alt="Image">
         <div class="carousel-caption">
           <h3></h3>
         
         </div>
       </div>
        <div class="item">
-        <img src="resources/images/table4.jpg" alt="Image">
+        <img src="resources/images/an.jpg" alt="Image">
+        <div class="carousel-caption">
+        </div>
+      </div>
+      
+       <div class="item">
+        <img src="resources/images/tk.jpg" alt="Image">
         <div class="carousel-caption">
         </div>
       </div>
@@ -214,6 +219,7 @@
       <span class="sr-only">Next</span>
     </a>
  </div>
+ 
  <div><h3 align="center">-------- Best Sellers --------</h3></div>
  <div class="row">
  <div class="col-sm-4">
@@ -224,8 +230,6 @@
   <div class="col-sm-4">
    <div class="thumbnail" align="justify">
       <img src="resources/images/table5.jpg" alt="table5">
-        <p><strong>Table</strong></p>
-        <p>Yes, San Fran is ours</p>
       </div>
    </div>
    
@@ -234,21 +238,7 @@
       <img src="resources/images/table6.jpg" alt="table6">
     </a>
   </div>
-   <div class="col-sm-4">
-    <a href="#" class="thumbnail">
-      <img src="resources/images/table6.jpg" alt="table6">
-    </a>
-  </div>
-   <div class="col-sm-4">
-    <a href="#" class="thumbnail">
-      <img src="resources/images/table6.jpg" alt="table6">
-    </a>
-  </div>
-   <div class="col-sm-4">
-    <a href="#" class="thumbnail">
-      <img src="resources/images/table6.jpg" alt="table6">
-    </a>
-  </div>
+  
   </div>
   <div><h3><center>-----What Our Customers Say ---</center></h3></div>
   <div>

@@ -43,8 +43,6 @@ import com.ntiques.service.UserService;
 @Component
 public class FlowController
 {
-	@Autowired (required=true)
-	private ProductService ProductService;
 	
 	@Autowired (required=true)
 	private ShippingAddress ShippingAddress;
@@ -53,25 +51,10 @@ public class FlowController
 	private BillingAddress BillingAddress;
 
 	@Autowired (required=true)
-	private OrderDetail OrderDetail;
-
-	@Autowired (required=true)
-	private OrderedItems OrderedItems;
-
-	@Autowired (required=true)
-	private CardDetail CardDetail;
-
-	@Autowired (required=true)
 	private ShippingAddressService ShippingAddressService;
 
 	@Autowired (required=true)
 	private BillingAddressService BillingAddressService;
-
-	@Autowired (required=true)
-	private OrderedItemsService OrderedItemsService;
-
-	@Autowired (required=true)
-	private OrderDetailService OrderDetailService;
 
 	@Autowired (required=true)
 	private CardDetailService CardDetailService;
@@ -156,13 +139,13 @@ public class FlowController
 
 		cart.setCartId(cart.getCartId());
 		cart.setUserId(cart.getUserId());
-		cart.setNoOfProducts(listOfCartItems.size());
+		
 
 		ShippingAddressService.saveOrUpdate(checkoutDetails.getShippingAddress());
 		BillingAddressService.saveOrUpdate(checkoutDetails.getBillingAddress());
 		CartService.saveOrUpdate(cart);
 
-		HttpSession.setAttribute("noOfProducts", cart.getNoOfProducts());
+		
 
 		return "success";
 	}

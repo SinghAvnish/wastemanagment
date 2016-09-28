@@ -63,7 +63,7 @@
 						<td>{{group.quantity}}</td>
 			        </tr>
 			        <td><a href="cart"><input type="button" value ="Checkout"> </a></td>
-			        <td><a href="/home"><input type="button" value ="BacktoShopping"> </a></td> 
+			        
 			</table>
 		</c:if>
 	</form:form>

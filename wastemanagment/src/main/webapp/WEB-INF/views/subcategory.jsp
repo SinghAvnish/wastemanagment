@@ -62,9 +62,11 @@
 						</c:when>
 
 						<c:otherwise>
-						<td><form:input class="form-control" path="id" /></td>
+						<td><form:input class="form-control" path="id"
+						pattern=".{4,7}" required="true"
+											title="id should contains 4 to 7 characters"  /></td>
 						</c:otherwise>
-							</c:choose>
+						</c:choose>
 						</div>
 					</div>
 				</tr>
@@ -74,7 +76,7 @@
 						<td><form:label class="control-label col-sm-12" path="name">
 								<spring:message text="Name" />
 							</form:label></td>
-						<td><form:input class="form-control" path="name" /></td>
+						<td><form:input class="form-control" path="name"  required="true"/></td>
 						<td><form:errors path="name" cssClass="error" /></td>
 					</div>
 				</tr>
@@ -82,8 +84,8 @@
 					<td><form:label class="control-label col-sm-12" path="desc">
 							<spring:message text="Description" />
 						</form:label></td>
-					<td><form:input class="form-control" path="desc" /></td>
-					<td>	<form:errors path="desc" cssClass="error"/></td>
+					<td><form:input class="form-control" path="desc" required="true" /></td>
+					<td><form:errors path="desc" cssClass="error"/></td>
 				</tr>
 				
 				

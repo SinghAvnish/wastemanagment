@@ -36,8 +36,8 @@
  
 </head>
 <body>
- <!-- <body ng-app="myApp" ng-controller="getData"> --> 
-<!-- <div class="jumbotron"> -->
+     <%@ include file="/WEB-INF/views/header.jsp"%>           
+ 
 <div class="container">
 	<h2>
 		<center>Add Product</center>
@@ -105,7 +105,7 @@
 					</div>
 				</tr>
 				<td><form:label class="control-label col-sm-12" path="image" >
-							Select Image
+						
 						</form:label></td>
 					<td><form:input  path="image" type="file"/></td>
 				</tr>

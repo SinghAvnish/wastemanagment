@@ -25,7 +25,6 @@ public class Cart implements Serializable
 	private int cartId;
 	private int userId;
 	private double grandTotal;
-	private int noOfProducts;
 	@ElementCollection
 	@OneToMany(mappedBy="cart", fetch = FetchType.EAGER)
    /* private Set<CartItem> cartItem;			
@@ -43,24 +42,13 @@ public class Cart implements Serializable
 	public void setGrandTotal(double grandTotal) {
 		this.grandTotal = grandTotal;
 	}
-	public int getNoOfProducts() {
-		return noOfProducts;
-	}
 	
-	public void setNoOfProducts(int noOfProducts) {
-		this.noOfProducts = noOfProducts;
-	}
 	
 	public void setCartId(int cartId) 
 	{
 		this.cartId = cartId;
 	}
-/*	public Set<CartItem> getCartItem() {
-		return cartItem;
-	}
-	public void setCartItem(Set<CartItem> cartItem) {
-		this.cartItem = cartItem;
-	}*/
+	
 	public int getUserId() 
 	{
 		return userId;
