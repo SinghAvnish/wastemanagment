@@ -1,2 +1,15 @@
 This project is based on purchase of Antique products such as furniture, Jewellarries and some masterpieces.User can buy a product online and can even purchase it if he wishes to.In this project you even have Admin Controlls where he can ad dlete or modify the products or categories and soon.
 In this project Webflow is also implemented on registration page.  
+
+To develop this project:
+
+I have Used
+Front End:  Json,JSTL,Bootstrap, Html Css. 
+BackEnd: H2 Hibernate Tomcat Server.
+MiddleWare: Angular Js to fetch data from Database.
+
+Thanks for your valuable time.
+
+
+
+
